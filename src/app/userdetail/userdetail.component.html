@@ -1,0 +1,75 @@
+<main>
+		<div id="form_container">
+			<div class="row">
+				<div class="col-md-5">
+					<div id="left_form">
+						<figure><img src="./assets/img/registration_bg.svg" alt=""></figure>
+						<h2>Client Detail</h2>
+						<p>Client detail for further communication</p>
+						<a href="#0" id="more_info" data-toggle="modal" data-target="#more-info"><i class="pe-7s-info"></i></a>
+					</div>
+				</div>
+				<div class="col-md-7">
+
+					<div id="wizard_container">
+						<div id="top-wizard">
+							<div id="progressbar"></div>
+						</div>
+						<!-- /top-wizard -->
+						<form name="example-1" id="wrapped" method="POST">
+							<input id="website" name="website" type="text" value="">
+							<!-- Leave for security protection, read docs for details -->
+							<div id="middle-wizard">
+
+								<div class="step">
+									<h3 class="main_question">Please provide below details</h3>
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="form-group">
+												<span *ngIf="showErrorFirstName" class="error">{{messageFirstName}}</span>
+												<input type="text" name="firstname" [(ngModel)]='model.firstName' (focus)='removeError()' class="form-control required" placeholder="First name">
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<input type="text" name="lastname" [(ngModel)]='model.lastName'(focus)='removeError()' class="form-control required" placeholder="Last name">
+											</div>
+										</div>
+									</div>
+									<!-- /row -->
+
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="form-group">
+												<span *ngIf="showErrorEmail" class="error">{{messageEmail}}</span>
+												<input type="email" name="email" [(ngModel)]='model.email' (focus)='removeError()' class="form-control required" placeholder="Your Email">
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<span *ngIf="showErrorMobile" class="error">{{messageMobile}}</span>
+												<input type="text" name="telephone" [(ngModel)]='model.mobile' (focus)='removeError()' class="form-control" placeholder="Your Mobile">
+											</div>
+										</div>
+									</div>
+									<!-- /row -->
+								</div>
+								<!-- /step-->
+
+							
+								<!-- /step-->
+							</div>
+							<!-- /middle-wizard -->
+							<div id="bottom-wizard">
+								<button type="button" name="backward" class="backward" [routerLink]="['/question2']">Previous </button>
+								<button type="button" name="forward" class="forward" (click)="onNext();">Schedule Meeting</button>
+								
+							</div>
+							<!-- /bottom-wizard -->
+						</form>
+					</div>
+					<!-- /Wizard container -->
+				</div>
+			</div><!-- /Row -->
+		</div><!-- /Form_container -->
+	</main>

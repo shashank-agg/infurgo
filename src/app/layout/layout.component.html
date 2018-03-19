@@ -1,0 +1,150 @@
+<main>
+	<div id="form_container">
+		<div class="row">
+			<div class="col-md-5">
+				<div id="left_form">
+					<figure><img src="./assets/img/registration_bg.svg" alt=""></figure>
+					<h2>Kitchen Layout</h2>
+					<p>The Kitchen layout is the structure of the kitchen.
+						 You can choose it based on the type of kitchen you need in the room. </p>
+				</div>
+			</div>
+			<div class="col-md-7">
+
+				<div id="wizard_container">
+					<div id="top-wizard">
+						<div id="progressbar"></div>
+					</div>
+					<!-- /top-wizard -->
+					<form name="example-1" id="wrapped" method="POST">
+						<input id="website" name="website" type="text" value="">
+						<!-- Leave for security protection, read docs for details -->
+						<div id="middle-wizard">
+
+							<div class="step">
+								<h3 class="main_question"><strong>1/4</strong>Please choose your kitchen layout</h3>
+								
+								<div class="owl-carousel owl-theme team-carousel">
+									
+									<span *ngIf="showError" class="error">{{message}}</span>
+									<div class="team-item">
+										<div class="team-item-img">
+											<img src="./assets/img/1.png" style="position: relative;top: 0;left:0;" alt="">
+											
+											<div *ngIf="showTick(1)">
+												<img src="./assets/img/tick.png" style="background-color: transparent;position: absolute;top: 30px;left:5px;" alt="">
+
+											</div>
+											<div *ngIf="!showTick(1)" class="team-item-detail">
+												<input type="hidden" name="kitchenType" [(ngModel)]="radioData" id="kitchenType1" [value]="1">
+												<div class="team-item-detail-inner">
+													<h4>U Shape Kitchen
+
+
+													</h4>
+
+													<p class="btn_1 white" (click)="selectRadio(1);">Select</p>
+
+												</div>
+											</div>
+
+										</div>
+										<div class="team-item-info">
+											<h4>U Shape Kitchen</h4>
+
+										</div>
+									</div>
+
+									<div class="team-item">
+										<div class="team-item-img">
+											<img src="./assets/img/2.png" style="position: relative;top: 0;left:0;" alt="">
+											<div *ngIf="showTick(2)">
+												<img src="./assets/img/tick.png" style="background-color: transparent;position: absolute;top: 30px;left:5px;" alt="">
+
+											</div>
+											<div *ngIf="!showTick(2)" class="team-item-detail">
+												<input type="hidden" name="kitchenType" [(ngModel)]="radioData" id="kitchenType2" [value]="2">
+												<div class="team-item-detail-inner">
+													<h4>L Shape Kitchen</h4>
+													<p class="btn_1 white" (click)="selectRadio(2);">Select</p>
+
+												</div>
+											</div>
+										</div>
+										<div class="team-item-info">
+											<h4>L Shape Kitchen</h4>
+										</div>
+									</div>
+
+									<div class="team-item">
+										<div class="team-item-img">
+											<img src="./assets/img/3.png" style="position: relative;top: 0;left:0;" alt="">
+											<div *ngIf="showTick(3)">
+												<img src="./assets/img/tick.png" style="background-color: transparent;position: absolute;top: 30px;left:5px;" alt="">
+
+											</div>
+											<div *ngIf="!showTick(3)" class="team-item-detail">
+												<input type="hidden" name="kitchenType" [(ngModel)]="radioData" id="kitchenType3" [value]="3">
+												<div class="team-item-detail-inner">
+													<h4>Straight Kitchen</h4>
+													<p class="btn_1 white" (click)="selectRadio(3);">Select</p>
+												</div>
+											</div>
+										</div>
+										<div class="team-item-info">
+											<h4>Straight Kitchen</h4>
+
+										</div>
+									</div>
+
+									<div class="team-item">
+										<div class="team-item-img">
+											<img src="./assets/img/4.png" style="position: relative;top: 0;left:0;" alt="">
+											<div *ngIf="showTick(4)">
+												<img src="./assets/img/tick.png" style="background-color: transparent;position: absolute;top: 30px;left:5px;" alt="">
+
+											</div>
+											<div *ngIf="!showTick(4)" class="team-item-detail">
+												<input type="hidden" name="kitchenType" [(ngModel)]="radioData" id="kitchenType4" [value]="4">
+												<div class="team-item-detail-inner">
+													<h4>Parallel Kitchen</h4>
+
+
+													<p class="btn_1 white" (click)="selectRadio(4);">Select</p>
+												</div>
+											</div>
+										</div>
+										<div class="team-item-info">
+											<h4>Parallel Kitchen</h4>
+
+										</div>
+									</div>
+
+								</div>
+								<!-- /row -->
+							</div>
+							<!-- /step-->
+
+
+							<!-- /step-->
+						</div>
+						<!-- /middle-wizard -->
+						<div id="bottom-wizard">
+							<div class="col-sm-8">
+							</div>
+							<div class="col-sm-4" style="align-items: inherit">
+								<button type="button" name="forward" class="forward" (click)="getImage();">Next</button>
+							</div>
+
+
+						</div>
+						<!-- /bottom-wizard -->
+					</form>
+				</div>
+				<!-- /Wizard container -->
+			</div>
+		</div>
+		<!-- /Row -->
+	</div>
+	<!-- /Form_container -->
+</main>

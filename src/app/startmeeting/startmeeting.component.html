@@ -1,0 +1,137 @@
+<main>
+		<div id="form_container">
+			<div class="row">
+			
+				<div class="col-md-12">
+
+					<div id="wizard_container">
+						<div id="top-wizard">
+							<div id="progressbar"></div>
+						</div>
+						<!-- /top-wizard -->
+						<form name="example-1" id="wrapped" method="POST">
+							<input id="website" name="website" type="text" value="">
+							<!-- Leave for security protection, read docs for details -->
+							<div id="middle-wizard">
+
+								<div class="step">
+									<h3 class="main_question">Client Detail</h3>
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="form-group">
+												{{clientData.clientName}} 
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												&nbsp;
+											</div>
+										</div>
+									</div>
+									<!-- /row -->
+
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="form-group">
+												{{clientData.clientMobile}}
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												{{clientData.clientEmail}}
+											</div>
+										</div>
+									</div>
+									<!-- /row -->
+								</div>
+
+                <div class="step">
+									<h3 class="main_question">Meeting Detail ({{clientData.meetingdate}} {{clientData.meetingTime}})</h3>
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="form-group">
+												{{clientData.layout}}
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												Side-1:{{clientData.side1}},Side-2:{{clientData.side2}}, Side-3:{{clientData.side3}}
+											</div>
+										</div>
+									</div>
+									<!-- /row -->
+
+									
+
+                  <div class="row">
+										<div class="col-sm-6">
+											<div class="form-group">
+												{{clientData.question1Ans}}
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+											{{clientData.question1Ans}}
+											</div>
+										</div>
+									</div>
+
+                  <div class="row">
+										<div class="col-sm-3">
+											<div class="form-group">
+											Meeting Link
+											</div>
+										</div>
+										<div class="col-sm-9">
+											<div class="form-group">
+										<a href="http://www.meeting.com?ssid=35434534jhjjhghg543l3845hjf8ehf834o" tagget="_blank">http://www.meeting.com?ssid=35434534jhjjhghg543l3845hjf8ehf834o</a>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="row">
+										<div class="col-sm-3">
+											<div class="form-group">
+												<span *ngIf="showErrorDate" class="error">{{messageDate}}</span>
+												<input class="form-control required" type="text" #startDate (focus)='removeError()' (click)="getMeetingTimeSlot(startDate.value)" 
+												name="meetingDate" id="meetingDate" 
+												placeholder="New Meeting Date">
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												
+											<span *ngIf="showErrorTimeslot" class="error">{{messageTimeslot}}</span>
+													<select class="required" name="meetingTime" [(ngModel)]="selectedTimeSlot" (focus)='removeError()'>
+														<option value="" selected>Available time slots</option>
+														 <option *ngFor="let timeslot of timeslots" value= {{timeslot.timeSlotId}} [style.color] = "timeslot.availableSlot > 0 ? '' : 'red'" [disabled] = "!timeslot.availableSlot">
+															{{timeslot.timeslot}} ({{timeslot.availableSlot}} out of {{timeslot.totalSlot}} Available)
+														</option>
+													</select>
+												
+											</div>
+										</div>
+									</div>
+									<!-- /row -->
+								</div>
+								<!-- /step-->
+
+							
+								<!-- /step-->
+							</div>
+							<!-- /middle-wizard -->
+							<div id="bottom-wizard">
+								<button type="button" name="backward" class="backward" [routerLink]="['/meetinglist']">Back to list </button>
+								<button type="button" name="forward" class="forward" (click)="saveMeeting();">Update Meeting</button>
+								<button type="button" name="forward" class="forward" [routerLink]="['/home']">Start Meeting</button>
+								
+							</div>
+							<!-- /bottom-wizard -->
+						</form>
+					</div>
+					<!-- /Wizard container -->
+				</div>
+			</div><!-- /Row -->
+		</div><!-- /Form_container -->
+	</main>

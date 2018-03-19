@@ -1,0 +1,93 @@
+<main>
+		<div id="form_container">
+			<div class="row">
+				<div class="col-md-5">
+					<div id="left_form">
+						<figure><img src="./assets/img/registration_bg.svg" alt=""></figure>
+						<h2>Question 3</h2>
+						<p>Tation argumentum et usu, dicit viderer evertitur te has. Eu dictas concludaturque usu, facete detracto patrioque an per, lucilius pertinacia eu vel.</p>
+						<a href="#0" id="more_info" data-toggle="modal" data-target="#more-info"><i class="pe-7s-info"></i></a>
+					</div>
+				</div>
+				<div class="col-md-7">
+
+					<div id="wizard_container">
+						<div id="top-wizard">
+							<div id="progressbar"></div>
+						</div>
+						<!-- /top-wizard -->
+						<form name="example-1" id="wrapped" method="POST">
+							<input id="website" name="website" type="text" value="">
+							<!-- Leave for security protection, read docs for details -->
+							<div id="middle-wizard">
+
+								<div class="step">
+									<h3 class="main_question"><strong>6/8</strong>Please answer below question</h3>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="form-group">
+												<div class="styled-select">
+													<select class="required" name="room_type">
+														<option value="" selected>Select Woodwork</option>
+														<option value="Single bed">Single bed</option>
+														<option value="Double Bed">Double Bed</option>
+														<option value="Luxury double bed">Luxury double bed</option>
+														<option value="Suite">Suite</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="form-group">
+												<div class="styled-select">
+													<select class="required" name="room_type">
+														<option value="" selected>Select Shutter</option>
+														<option value="Single bed">Single bed</option>
+														<option value="Double Bed">Double Bed</option>
+														<option value="Luxury double bed">Luxury double bed</option>
+														<option value="Suite">Suite</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="form-group">
+												<div class="styled-select">
+													<select class="required" name="room_type">
+														<option value="" selected>Select Hardware / Accessories</option>
+														<option value="Single bed">Single bed</option>
+														<option value="Double Bed">Double Bed</option>
+														<option value="Luxury double bed">Luxury double bed</option>
+														<option value="Suite">Suite</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- /row -->
+								</div>
+								<!-- /step-->
+
+							
+								<!-- /step-->
+							</div>
+							<!-- /middle-wizard -->
+							<div id="bottom-wizard">
+								<button type="button" name="backward" class="backward" [routerLink]="['/question2']">Previous </button>
+								<button type="button" name="forward" class="forward" [routerLink]="['/userdetail']">Next</button>
+								
+							</div>
+							<!-- /bottom-wizard -->
+						</form>
+					</div>
+					<!-- /Wizard container -->
+				</div>
+			</div><!-- /Row -->
+		</div><!-- /Form_container -->
+	</main>

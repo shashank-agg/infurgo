@@ -1,0 +1,61 @@
+<main>
+		<div id="form_container">
+ <div style="margin: auto; max-width: 1300px; margin-bottom: 50px;">
+    <data-table id="persons-grid"
+        headerTitle="Meeting List"
+        [items]="items"
+        [itemCount]="itemCount"
+        (reload)="reloadItems($event)"
+
+        (rowClick)="rowClick($event)"
+        (rowDoubleClick)="rowDoubleClick($event)"
+        [rowTooltip]="rowTooltip" 
+        >
+        <data-table-column
+            [property]="'clientName'"
+            [header]="'Name'"
+            [sortable]="true"
+            [resizable]="true">
+        </data-table-column>
+        <data-table-column
+            [property]="'meetingdate'"
+            [header]="'Date'"
+            [sortable]="true">
+            
+        </data-table-column>
+
+        <data-table-column
+            [property]="'meetingTime'"
+            [header]="'Time'"
+            [sortable]="true">
+           
+        </data-table-column>
+        <data-table-column
+            property="clientMobile"
+            header="Phone number"
+            width="150px">
+        </data-table-column>
+        <data-table-column
+            [property]="'clientEmail'"
+            [header]="'Email'" >
+        </data-table-column>
+        <data-table-column
+            [property]="'active'"
+            [header]="'Active'"
+            [width]="100"
+            [resizable]="true">
+            <ng-template #dataTableHeader let-item="item">
+                <span style="color: rgb(232, 0, 0)">Active</span>
+            </ng-template>
+            <ng-template #dataTableCell let-item="item">
+                <span style="color: grey">
+               <button (click)="openDetail(item.id)" class="btn btn-sm btn-default">Start Session</button>
+                </span>
+            </ng-template>
+        </data-table-column>
+    </data-table>
+</div>
+
+
+		</div><!-- /Form_container -->
+	</main>

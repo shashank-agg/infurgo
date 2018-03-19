@@ -1,0 +1,58 @@
+<main>
+		<div id="form_container">
+			<div class="row">
+				<div class="col-md-5">
+					<div id="left_form">
+						<figure><img src="./assets/img/registration_bg.svg" alt=""></figure>
+						<h2>Kitchen Optimization</h2>
+						<p>You can optimize your kitchen to have more storage or for looks as primary requirement.</p>
+						<a href="#0" id="more_info" data-toggle="modal" data-target="#more-info"><i class="pe-7s-info"></i></a>
+					</div>
+				</div>
+				<div class="col-md-7">
+
+					<div id="wizard_container">
+						<div id="top-wizard">
+							<div id="progressbar"></div>
+						</div>
+						<!-- /top-wizard -->
+						<form name="example-1" id="wrapped" method="POST">
+							<input id="website" name="website" type="text" value="">
+							<!-- Leave for security protection, read docs for details -->
+							<div id="middle-wizard">
+
+								<div class="step">
+									<h3 class="main_question"><strong>4/4</strong>Please choose the optimization parameter for your Kitchen </h3>
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="form-group radio_input">
+												<label><input type="radio" value="9" name="question_2[]" class="icheck required" [checked]="selectedThemename=='option1'" (click)="setSelectedTheme($event,'option1')">Design</label>
+											</div>
+											<div class="form-group radio_input">
+												<label><input type="radio" value="10" name="question_2[]" class="icheck required" [checked]="selectedThemename=='option2'" (click)="setSelectedTheme($event,'option2')">Storage</label>
+											</div>
+											
+										</div>
+										
+									</div>
+									<!-- /row -->
+								</div>
+								<!-- /step-->
+
+							
+								<!-- /step-->
+							</div>
+							<!-- /middle-wizard -->
+							<div id="bottom-wizard">
+								<button type="button" name="backward" class="backward" [routerLink]="['/question1']">Previous </button>
+								<button type="button" name="forward" class="forward" (click)="goNext(5)">Next</button>
+								
+							</div>
+							<!-- /bottom-wizard -->
+						</form>
+					</div>
+					<!-- /Wizard container -->
+				</div>
+			</div><!-- /Row -->
+		</div><!-- /Form_container -->
+	</main>

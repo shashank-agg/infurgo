@@ -1,0 +1,77 @@
+<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div><!-- /Preload -->
+  	<header>
+		<div class="container-fluid">
+		    <div class="row">
+                <div class="col-xs-3">
+                    <a href="index.html"><img src="./assets/img/logo.png" alt="" width="85" height="37" data-retina="true"></a>
+                </div>
+                <div class="col-xs-9">
+                    <div id="social">
+                        <ul>
+                            <li><a href="#0"><i class="icon-facebook"></i></a></li>
+                            <li><a href="#0"><i class="icon-twitter"></i></a></li>
+                            <li><a href="#0"><i class="icon-google"></i></a></li>
+                            <li><a href="#0"><i class="icon-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- /social -->
+                    <nav>
+                        <ul class="cd-primary-nav" ngbDropDown>
+                            <li><a  (click)="showHome()" class="animated_link">Home</a></li>
+                            <li><a  (click)="showLayout()" class="animated_link">Consult With Designer</a></li>
+                            <li><a  (click)="showDesignerLogin()"  class="animated_link">Designer Login</a></li>
+                            <li><a  (click)="showClientLogin()"  class="animated_link">Client Login</a></li>
+                            <li><a  (click)="showContactUs()"  class="animated_link">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+		</div>
+		<!-- container -->
+	</header>
+
+	<!-- End section -->
+	<!-- End SubHeader ============================================ -->
+<router-outlet></router-outlet>
+<footer id="home" class="clearfix">
+		<p>© 2017 Infurgo</p>
+		<ul>
+			<li><a [routerLink]="['/home']" class="animated_link">About us</a></li>
+			<li><a href="#0"  data-toggle="modal" data-target="#more-info" class="animated_link">Terms and conditions</a></li>
+			<li><a [routerLink]="['/contactus']" class="animated_link">Contacts</a></li>
+		</ul>
+	</footer>
+<div class="cd-overlay-nav">
+		<span></span>
+	</div>
+	<!-- cd-overlay-nav -->
+
+	<div class="cd-overlay-content">
+		<span></span>
+	</div>
+	<!-- cd-overlay-content -->
+
+	<a  class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+<!-- Modal terms -->
+	<div class="modal fade" id="more-info" tabindex="-1" role="dialog" aria-labelledby="more-infoLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="more-infoLabel">Terms and conditions</h4>
+				</div>
+				<div class="modal-body">
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in <strong>nec quod novum accumsan</strong>, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. Lorem ipsum dolor sit amet, <strong>in porro albucius qui</strong>, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn_1" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>

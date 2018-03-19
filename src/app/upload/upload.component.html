@@ -1,0 +1,83 @@
+
+<style>
+    .my-drop-zone { border: dotted 3px lightgray; }
+    .nv-file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */
+    .another-file-over-class { border: dotted 3px green; }
+ 
+    
+</style>
+<main>
+		<div id="form_container">
+			<div class="row">
+				<div class="col-md-5">
+					<div id="left_form">
+						<figure><img src="./assets/img/registration_bg.svg" alt=""></figure>
+						<h2>Kitchen Images</h2>
+						<p>Tation argumentum et usu, dicit viderer evertitur te has. Eu dictas concludaturque usu, facete detracto patrioque an per, lucilius pertinacia eu vel.</p>
+						<a href="#0" id="more_info" data-toggle="modal" data-target="#more-info"><i class="pe-7s-info"></i></a>
+					</div>
+				</div>
+				<div class="col-md-7">
+
+					<div id="wizard_container">
+						<div id="top-wizard">
+							<div id="progressbar"></div>
+						</div>
+						<!-- /top-wizard -->
+						<form class="box" method="post" action="" enctype="multipart/form-data">
+							<input id="website" name="website" type="text" value="">
+							<!-- Leave for security protection, read docs for details -->
+							<div id="middle-wizard">
+
+								<div class="step">
+									<h3 class="main_question"><strong>3/8</strong>Please upload your kitchen space image</h3>
+									<div ng2FileDrop  [ngClass]="{'nv-file-over': hasBaseDropZoneOver}"  (fileOver)="fileOverBase($event)"  [uploader]="uploader"  
+									class="well my-drop-zone text-center" >Drop File Here </div>
+			    					 <input type="file" ng2FileSelect [uploader]="uploader" multiple  />
+<span *ngIf="showError" class="error">{{message}}</span>
+		<table class="table">
+                <thead>
+                <tr>
+                    <th width="50%">Uploaded Files</th>
+                    <th width="40%">&nbsp;</th>
+					<th width="10%">&nbsp;</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let item of uploader.queue">
+                    <td><strong>{{ item?.file?.name }}</strong> ({{ item?.file?.size/1024/1024 | number:'.2' }} MB)</td>
+                   
+                    <td >
+                        <div class="progress" style="margin-bottom: 0;" (onCreate)="item.upload()">
+                            <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': item.progress + '%' }"></div>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <span *ngIf="item.isSuccess"><i class="fa fa-times" (click)="removeFromServer(item)"></i></span>
+                        <span *ngIf="item.isCancel"><i class="fa fa-times" (click)="item.cancel()"></i></span>
+                        <span *ngIf="item.isError"><i class="fa fa-times" style="color: red;" (click)="item.remove()"></i></span>
+                    </td>
+                    
+                </tr>
+                </tbody>
+            </table>
+								</div>
+								<!-- /step-->
+
+							
+								<!-- /step-->
+							</div>
+							<!-- /middle-wizard -->
+							<div id="bottom-wizard">
+								<button type="button" name="backward" class="backward" [routerLink]="['/layout']">Start Again </button>
+								<button type="button" name="forward" class="forward" [routerLink]="['/question1']">Next/Skip</button>
+								
+							</div>
+							<!-- /bottom-wizard -->
+						</form>
+					</div>
+					<!-- /Wizard container -->
+				</div>
+			</div><!-- /Row -->
+		</div><!-- /Form_container -->
+	</main>

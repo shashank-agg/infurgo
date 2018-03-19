@@ -1,0 +1,80 @@
+<style>
+.img-theme{
+ width: 170px;
+ height: 100px;
+ 
+ border:4px solid #cccccc;
+
+
+}
+</style>
+<main>
+		<div id="form_container">
+			<div class="row">
+				<div class="col-md-5">
+					<div id="left_form">
+						<figure><img src="./assets/img/registration_bg.svg" alt=""></figure>
+						<h2>Kitchen Theme</h2>
+						<p>Choose kitchen theme.</p>
+						<a href="#0" id="more_info" data-toggle="modal" data-target="#more-info"><i class="pe-7s-info"></i></a>
+					</div>
+				</div>
+				<div class="col-md-7">
+
+					<div id="wizard_container">
+						<div id="top-wizard">
+							<div id="progressbar"></div>
+						</div>
+						<!-- /top-wizard -->
+						<form name="example-1" id="wrapped" method="POST">
+							<input id="website" name="website" type="text" value="">
+							<!-- Leave for security protection, read docs for details -->
+							<div id="middle-wizard">
+
+								<div class="step">
+									<h3 class="main_question"><strong>3/4</strong>Please select kitchen theme</h3>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="col-sm-6 form-group radio_input">
+												<label><input type="radio" value="5" name="satisfaction" class="icheck required" [checked]="selectedThemename=='theme1'" (click)="setSelectedTheme($event,'theme1')">
+												<img src="./assets/img/option1.jpg" class="img-theme" > 
+												</label>
+											</div>
+											<div class="col-sm-6 form-group radio_input">
+													<label>
+														<input type="radio" value="6" name="satisfaction" class="icheck required" [checked]="selectedThemename=='theme2'" (click)="setSelectedTheme($event,'theme2')">
+														<img src="./assets/img/option2.jpg" class="img-theme" > 
+													</label>
+											</div>
+										</div>
+										<div class="col-sm-12">
+											<div class="col-sm-6 form-group radio_input">
+												<label><input type="radio" value="7" name="satisfaction" class="icheck required" [checked]="selectedThemename=='theme3'" (click)="setSelectedTheme($event,'theme3')"> 
+												<img src="./assets/img/option3.jpg" class="img-theme" > </label>
+											</div>
+											
+											</div>
+										
+										
+									</div>
+									<!-- /row -->
+								</div>
+								<!-- /step-->
+
+							
+								<!-- /step-->
+							</div>
+							<!-- /middle-wizard -->
+							<div id="bottom-wizard">
+								<button type="button" name="backward" class="backward" [routerLink]="['/size']">Previous </button>
+								<button type="button" name="forward" class="forward" (click)="goNext(4)">Next/Skip</button>
+								
+							</div>
+							<!-- /bottom-wizard -->
+						</form>
+					</div>
+					<!-- /Wizard container -->
+				</div>
+			</div><!-- /Row -->
+		</div><!-- /Form_container -->
+	</main>

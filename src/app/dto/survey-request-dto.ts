@@ -1,0 +1,19 @@
+export class SurveyRequestDto {
+    surveyId:string;
+	questionid:string;
+	optionid:string;
+	side1:string;
+	side2:string;
+	side3:string;
+	side4:string;
+	images:any[];
+	imageName:string;
+	optionids:string;
+	firstName:string;
+	lastName:string;
+	email:string;
+	mobile:string;
+	meetingDate:string;
+	meetingTimeSlot:string;
+	meetingId:string;
+}
