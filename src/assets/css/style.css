@@ -1,4 +1,4 @@
-/*
+/* /*
 Theme Name: Mavia 
 Theme URI: http://www.ansonika.com/mavia/
 Author: Ansonika
@@ -34,7 +34,7 @@ html * {
 }
 
 body {
-	background: #e4edf2;
+	/* background: #e4edf2; */
 	font-size: 16px;
 	line-height: 1.5;
 	font-family: "Roboto Condensed", Arial, sans-serif;
@@ -293,9 +293,9 @@ only screen and (min-device-pixel-ratio: 2) {
 footer {
 	background-color: #fff;
 	border-top: 1px solid #ededed;
-	padding: 25px 0;
+	padding: 25px;
 }
-footer#home {
+/* footer#home {
 	width: 1000px;
 	margin: auto;
 	font-size: 15px;
@@ -304,7 +304,7 @@ footer#home {
 	background-color: transparent;
 	border-top: none;
 	padding: 0;
-}
+} */
 footer p {
 	margin: 0;
 	padding: 0;
@@ -340,28 +340,18 @@ footer ul li a{
 /* 2.  CONTENT */
 /*============================================================================================*/
 /*-------- 2.1 Home/front page--------*/
-#form_container {
+/* #form_container {
 	background-color: #fff;
 	width: 1000px;
 	min-height: 460px;
 	margin: 70px auto 30px;
-}
+} */
 
 #form_thanku_container {
 	background-color: #fff;
 	width: 1000px;
 	min-height: 260px;
 	margin: 70px auto 30px;
-}
-
-#left_form {
-	background-color: #F60;
-	min-height: 460px;
-	color: #fff;
-	text-align: center;
-	padding: 70px 50px 30px 50px;
-	box-sizing: border-box;
-	position: relative;
 }
 
 #left_form h2 {
@@ -494,12 +484,12 @@ button.submit:before {
 }
 
 #middle-wizard {
-	padding: 45px 45px 30px 15px;
+	/* padding: 45px 45px 30px 15px; */
 }
 
 #bottom-wizard {
 	text-align: right;
-	position: absolute;
+	/* position: absolute; */
 	width: 100%;
 	bottom: 25px;
 	right: 45px;
@@ -807,38 +797,9 @@ ul.contacts_info li:last-child {
 	margin-bottom: 0;
 }
 
-.parallax_window_in {
-	height: 420px;
-	position: relative;
-	display: table;
-	width: 100%;
-}
-
-#sub_content_in {
-	display: table-cell;
-	padding: 45px 15% 0 15%;
-	vertical-align: middle;
-	text-align: center;
-	background: rgba(0, 0, 0, 0.4);
-}
-
-#sub_content_in h1 {
-	color: #fff;
-	font-weight: 600;
-	text-transform: uppercase;
-	font-size: 42px;
-	margin-bottom: 0;
-}
-
-#sub_content_in p {
-	color: #fff;
-	font-size: 24px;
-	font-weight: 300;
-}
-
-.container_styled_1 {
+/* .container_styled_1 {
 	background: #f9f9f9;
-}
+} */
 
 .team-item-img {
 	position: relative;
@@ -1530,4 +1491,4 @@ input.qtyminus {
 	animation: checkmark-circle 0.6s ease-in-out backwards
 }
 
-
+ */

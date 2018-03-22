@@ -60,7 +60,7 @@ export class LayoutComponent implements OnInit, AfterViewInit {
 
   onNext() {
 
-  /*  if (this.radioData == 0) {
+  if (this.radioData == 0) {
       this.showError = true;
       this.message = "Please select kitchen type";
       return false;
@@ -86,14 +86,15 @@ export class LayoutComponent implements OnInit, AfterViewInit {
         }
         sessionStorage.setItem("ssn_surveyId", this.surveyId);
         sessionStorage.setItem("ssn_selectedLayout", this.radioData);
-        this.router.navigate(['/size']);
+        this.router.navigate(['home/size']);
       }, err => {
         console.log(err);
         this.showError = true;
         this.message = "Error Occured !!! Please try later";
         return false;
-      });*/
-      this.router.navigate(['/size']);
+      });
+      console.log(this.router)
+      this.router.navigate(['home/size']);
   }
 
 }

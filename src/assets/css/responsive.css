@@ -3,7 +3,7 @@
 /*============================================================================================*/
 @media (max-width: 1024px) {
 	
-	#form_container, footer#home {
+	#form_container{
 	   width:800px;
     }
 	
@@ -17,10 +17,10 @@
 	#form_container .row {
 		margin: 0;
 	}
-	footer#home {
+	/* footer#home {
 		width:100%;
 		padding: 0 30px;
-	}
+	} */
 	#left_form {
 		text-align:left;
 		padding:30px;

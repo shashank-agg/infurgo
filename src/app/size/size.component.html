@@ -1,100 +1,99 @@
-<main>
-	<div id="form_container">
-		<div class="row">
-			<div class="col-md-5">
-				<div id="left_form">
-					<figure><img src="./assets/img/registration_bg.svg" alt=""></figure>
-					<h2>Kitchen Size </h2>
-					<p>Please provide the wall to wall size of each side in feet and inches.</p>
-					<a href="#0" id="more_info" data-toggle="modal" data-target="#more-info"><i class="pe-7s-info"></i></a>
-				</div>
-			</div>
-			<div class="col-md-7">
+<div id="question-container">
+    <div class="col-md-5 lhs-container">
+        <div id="lhs-content">
+            <figure>
+                <img src="./assets/img/registration_bg.svg" alt="">
+            </figure>
+            <h2>Kitchen Size </h2>
+            <p>Please provide the wall to wall size of each side in feet and inches.</p>
+            <a href="#0" id="more_info" data-toggle="modal" data-target="#more-info">
+                <i class="pe-7s-info"></i>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-7">
 
-				<div id="wizard_container">
-					<div id="top-wizard">
-						<div id="progressbar"></div>
-					</div>
-					<!-- /top-wizard -->
-					<form name="example-1" id="wrapped" method="POST">
-						<input id="website" name="website" type="text" value="">
-						<!-- Leave for security protection, read docs for details -->
-						<div id="middle-wizard">
+        <div id="wizard_container">
+            <div id="top-wizard">
+                <div id="progressbar"></div>
+            </div>
+            <!-- /top-wizard -->
+            <form name="example-1" id="wrapped" method="POST">
+                <input id="website" name="website" type="text" value="">
+                <!-- Leave for security protection, read docs for details -->
+                <div id="middle-wizard">
 
-							<div class="step">
-								<h3 class="main_question"><strong>2/4</strong>Please fill your kitchen size</h3>
-								<div class="row">
-									<div class="col-sm-4">
-									</div>
-									<div class="col-sm-4">
-										<img src="./assets/img/1.png" style="width: 150px;height: 150px;" alt="">
-									</div>
-									<div class="col-sm-4">
-									</div>
-								</div>
-								<div class="row">
-									
-									<div class="col-sm-6" *ngIf="showSizeComponent('side1')">
-										<span *ngIf="showError" class="error">{{message}}</span>
-										<div class="form-group">
-											<div class="qty-buttons" >
-												<input type="button" value="+" class="qtyplus" name="side1" (click)="plusqty('side1')">
-												<input type="text" name="side1" [(ngModel)]='side1' class="qty form-control required" placeholder="Side-1">
-												<input type="button" value="-" class="qtyminus" name="side1" (click)="minusqty('side1')">
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6" *ngIf="showSizeComponent('side2')">
-										<div class="form-group">
-											<div class="qty-buttons">
-												<input type="button" value="+" class="qtyplus" name="side2" (click)="plusqty('side2')">
-												<input type="text" name="side2" [(ngModel)]='side2' class="qty form-control required" placeholder="Side-2">
-												<input type="button" value="-" class="qtyminus" name="side2" (click)="minusqty('side2')">
-											</div>
-										</div>
-									</div>
-								</div>
+                    <div class="step">
+                        <h3 class="main_question">
+                            <strong>2/4</strong>Please fill your kitchen size</h3>
+                        <div class="row">
+                            <div class="col-sm-4">
+                            </div>
+                            <div class="col-sm-4">
+                                <img src="./assets/img/1.png" style="width: 150px;height: 150px;" alt="">
+                            </div>
+                            <div class="col-sm-4">
+                            </div>
+                        </div>
+                        <div class="row">
 
-								<div class="row">
-									<div class="col-sm-6" *ngIf="showSizeComponent('side3')">
-										<div class="form-group">
-											<div class="qty-buttons">
-												<input type="button" value="+" class="qtyplus" name="side3" (click)="plusqty('side3')">
-												<input type="text" name="side3" [(ngModel)]='side3' class="qty form-control required" placeholder="Side-3">
-												<input type="button" value="-" class="qtyminus" name="side3" (click)="minusqty('side3')">
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6"*ngIf="showSizeComponent('side4')">
-										<div class="form-group">
-											<div class="qty-buttons">
-												<input type="button" value="+" class="qtyplus" name="side4" (click)="plusqty('side4')">
-												<input type="text" name="side4" [(ngModel)]='side4' class="qty form-control required" placeholder="Side-4">
-												<input type="button" value="-" class="qtyminus" name="side4" (click)="minusqty('side4')">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- /step-->
+                            <div class="col-sm-6" *ngIf="showSizeComponent('side1')">
+                                <span *ngIf="showError" class="error">{{message}}</span>
+                                <div class="form-group">
+                                    <div class="qty-buttons">
+                                        <input type="button" value="+" class="qtyplus" name="side1" (click)="plusqty('side1')">
+                                        <input type="text" name="side1" [(ngModel)]='side1' class="qty form-control required" placeholder="Side-1">
+                                        <input type="button" value="-" class="qtyminus" name="side1" (click)="minusqty('side1')">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6" *ngIf="showSizeComponent('side2')">
+                                <div class="form-group">
+                                    <div class="qty-buttons">
+                                        <input type="button" value="+" class="qtyplus" name="side2" (click)="plusqty('side2')">
+                                        <input type="text" name="side2" [(ngModel)]='side2' class="qty form-control required" placeholder="Side-2">
+                                        <input type="button" value="-" class="qtyminus" name="side2" (click)="minusqty('side2')">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6" *ngIf="showSizeComponent('side3')">
+                                <div class="form-group">
+                                    <div class="qty-buttons">
+                                        <input type="button" value="+" class="qtyplus" name="side3" (click)="plusqty('side3')">
+                                        <input type="text" name="side3" [(ngModel)]='side3' class="qty form-control required" placeholder="Side-3">
+                                        <input type="button" value="-" class="qtyminus" name="side3" (click)="minusqty('side3')">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6" *ngIf="showSizeComponent('side4')">
+                                <div class="form-group">
+                                    <div class="qty-buttons">
+                                        <input type="button" value="+" class="qtyplus" name="side4" (click)="plusqty('side4')">
+                                        <input type="text" name="side4" [(ngModel)]='side4' class="qty form-control required" placeholder="Side-4">
+                                        <input type="button" value="-" class="qtyminus" name="side4" (click)="minusqty('side4')">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /step-->
 
 
-							<!-- /step-->
-						</div>
-						<!-- /middle-wizard -->
-						<div id="bottom-wizard">
-							<button type="button" name="backward" class="backward" (click)="getStarted();">Previous </button>
-							
-							<button type="button" name="forward" class="forward" (click)="onNext();">Next/Skip</button>
+                    <!-- /step-->
+                </div>
+                <!-- /middle-wizard -->
+                <div id="bottom-wizard">
+                    <button type="button" name="backward" class="backward" (click)="getStarted();">Previous </button>
 
-						</div>
-						<!-- /bottom-wizard -->
-					</form>
-				</div>
-				<!-- /Wizard container -->
-			</div>
-		</div>
-		<!-- /Row -->
-	</div>
-	<!-- /Form_container -->
-</main>
+                    <button type="button" name="forward" class="forward" (click)="onNext();">Next/Skip</button>
+
+                </div>
+                <!-- /bottom-wizard -->
+            </form>
+        </div>
+        <!-- /Wizard container -->
+    </div>
+</div>

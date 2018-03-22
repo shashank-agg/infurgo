@@ -44,7 +44,7 @@ export class SizeComponent implements OnInit {
     }
 
     getStarted() {
-        this.router.navigate(['/layout']);
+        this.router.navigate(['/home/layout']);
     }
     showSizeComponent(compname: string) {
         // if (compname == 'side1' && (this.selectedImage == '1' || this.selectedImage == '2' || this.selectedImage == '3' || this.selectedImage == '3'))
