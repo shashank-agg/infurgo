@@ -22,7 +22,6 @@ jQuery(document).ready(function($){
 	//open/close the menu and cover layers
 	toggleNav.on('click', function(){
 		menuLayer();
-        // window.requestAnimationFrame(layerInit);
 
 	});
 
@@ -70,49 +69,55 @@ var overlayNav = $('.cd-overlay-nav'),
 		if(!toggleNav.hasClass('close-nav')) {
 			
 			//it means navigation is not visible yet - open it and animate navigation layer
-			toggleNav.addClass('close-nav');
+            toggleNav.addClass('close-nav');
+            console.log(toggleNav.children("div"));
+            toggleNav.children("div").addClass("open")
 			
-			overlayNav.children('span').velocity({
-				translateZ: 0,
-				scaleX: 1,
-				scaleY: 1,
-			}, 50, 'easeInCubic', function(){
-				navigation.addClass('fade-in');
-			});
+			// overlayNav.children('span').velocity({
+			// 	translateZ: 0,
+			// 	scaleX: 1,
+			// 	scaleY: 1,
+			// }, 50, 'easeInCubic', function(){
+			// 	navigation.addClass('fade-in');
+			// });
+            navigation.addClass('fade-in');
 			
 		} else {
 			//navigation is open - close it and remove navigation layer
 			
 			toggleNav.removeClass('close-nav');
-			
-			overlayContent.children('span').velocity({
-				translateZ: 0,
-				scaleX: 1,
-				scaleY: 1,
-			}, 50, 'easeInCubic', function(){
-				navigation.removeClass('fade-in');
+            console.log(toggleNav.children("div"));
+            toggleNav.children("div").removeClass("open")
+            navigation.removeClass('fade-in')
+            
+			// overlayContent.children('span').velocity({
+			// 	translateZ: 0,
+			// 	scaleX: 1,
+			// 	scaleY: 1,
+			// }, 50, 'easeInCubic', function(){
+			// 	navigation.removeClass('fade-in');
 				
-				overlayNav.children('span').velocity({
-					translateZ: 0,
-					scaleX: 0,
-					scaleY: 0,
-				}, 0);
+			// 	overlayNav.children('span').velocity({
+			// 		translateZ: 0,
+			// 		scaleX: 0,
+			// 		scaleY: 0,
+			// 	}, 0);
 				
-				overlayContent.addClass('is-hidden').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-					overlayContent.children('span').velocity({
-						translateZ: 0,
-						scaleX: 0,
-						scaleY: 0,
-					}, 0, function(){overlayContent.removeClass('is-hidden')});
-				});
-				if($('html').hasClass('no-csstransitions')) {
-					overlayContent.children('span').velocity({
-						translateZ: 0,
-						scaleX: 0,
-						scaleY: 0,
-					}, 0, function(){overlayContent.removeClass('is-hidden')});
-				}
-			});
+			// 	overlayContent.addClass('is-hidden').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+			// 		overlayContent.children('span').velocity({
+			// 			translateZ: 0,
+			// 			scaleX: 0,
+			// 			scaleY: 0,
+			// 		}, 0, function(){overlayContent.removeClass('is-hidden')});
+			// 	});
+			// 	if($('html').hasClass('no-csstransitions')) {
+			// 		overlayContent.children('span').velocity({
+			// 			translateZ: 0,
+			// 			scaleX: 0,
+			// 			scaleY: 0,
+			// 		}, 0, function(){overlayContent.removeClass('is-hidden')});
+			// 	}
+			// });
 		}
 	
 }

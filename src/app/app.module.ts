@@ -30,6 +30,7 @@ import { OnCreateDirective } from './on-create.directive';
 import { DataTableModule } from 'angular-4-data-table-bootstrap-4';
 import { FailureComponent } from './failure/failure.component';
 import { AuthGuard } from '../guards/auth.guard';
+import { MenuiconComponent } from './menuicon/menuicon.component';
 
 
 
@@ -92,7 +93,8 @@ const appRoutes: Routes = [
         StartmeetingComponent,
         ContactusComponent,
         OnCreateDirective,
-        FailureComponent
+        FailureComponent,
+        MenuiconComponent
     ],
     imports: [
         BrowserModule,

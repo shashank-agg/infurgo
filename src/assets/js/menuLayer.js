@@ -8,51 +8,52 @@ var myExtObject = (function() {
 		toggleNav = $('.cd-nav-trigger');
 		
 		if(!toggleNav.hasClass('close-nav')) {
+			navigation.addClass('fade-in')
+			// //it means navigation is not visible yet - open it and animate navigation layer
+			// toggleNav.addClass('close-nav');
 			
-			//it means navigation is not visible yet - open it and animate navigation layer
-			toggleNav.addClass('close-nav');
-			
-			overlayNav.children('span').velocity({
-				translateZ: 0,
-				scaleX: 1,
-				scaleY: 1,
-			}, 500, 'easeInCubic', function(){
-				navigation.addClass('fade-in');
-			});
+			// overlayNav.children('span').velocity({
+			// 	translateZ: 0,
+			// 	scaleX: 1,
+			// 	scaleY: 1,
+			// }, 500, 'easeInCubic', function(){
+			// 	navigation.addClass('fade-in');
+			// });
 			
 		} else {
 			//navigation is open - close it and remove navigation layer
 			
 			toggleNav.removeClass('close-nav');
-			
-			overlayContent.children('span').velocity({
-				translateZ: 0,
-				scaleX: 1,
-				scaleY: 1,
-			}, 500, 'easeInCubic', function(){
-				navigation.removeClass('fade-in');
+            navigation.removeClass('fade-in');
+            
+			// overlayContent.children('span').velocity({
+			// 	translateZ: 0,
+			// 	scaleX: 1,
+			// 	scaleY: 1,
+			// }, 500, 'easeInCubic', function(){
+			// 	navigation.removeClass('fade-in');
 				
-				overlayNav.children('span').velocity({
-					translateZ: 0,
-					scaleX: 0,
-					scaleY: 0,
-				}, 0);
+			// 	overlayNav.children('span').velocity({
+			// 		translateZ: 0,
+			// 		scaleX: 0,
+			// 		scaleY: 0,
+			// 	}, 0);
 				
-				overlayContent.addClass('is-hidden').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-					overlayContent.children('span').velocity({
-						translateZ: 0,
-						scaleX: 0,
-						scaleY: 0,
-					}, 0, function(){overlayContent.removeClass('is-hidden')});
-				});
-				if($('html').hasClass('no-csstransitions')) {
-					overlayContent.children('span').velocity({
-						translateZ: 0,
-						scaleX: 0,
-						scaleY: 0,
-					}, 0, function(){overlayContent.removeClass('is-hidden')});
-				}
-			});
+			// 	overlayContent.addClass('is-hidden').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+			// 		overlayContent.children('span').velocity({
+			// 			translateZ: 0,
+			// 			scaleX: 0,
+			// 			scaleY: 0,
+			// 		}, 0, function(){overlayContent.removeClass('is-hidden')});
+			// 	});
+			// 	if($('html').hasClass('no-csstransitions')) {
+			// 		overlayContent.children('span').velocity({
+			// 			translateZ: 0,
+			// 			scaleX: 0,
+			// 			scaleY: 0,
+			// 		}, 0, function(){overlayContent.removeClass('is-hidden')});
+			// 	}
+			// });
 		}
     }
   }
