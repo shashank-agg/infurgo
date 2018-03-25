@@ -7,6 +7,11 @@
 /*============================================================================================*/
 
 /* Generic classes */
+
+.fp-responsive .fp-section, .fp-responsive .fp-slide, .fp-responsive .fp-tableCell {
+    height: auto !important;
+}
+
 .padding-10 {
     padding: 10px;
 }
@@ -18,7 +23,7 @@
 
 .question-container {
     min-height: 100vh;
-    background-color: #ebf0f6
+    /* background-color: #ebf0f6 */
 }
 
 .question-container .lhs-container {
@@ -38,6 +43,7 @@
     left: 0;
     margin: auto;
     height: 50%;
+    padding: 20px;
 }
 
 .question-container .rhs-container {

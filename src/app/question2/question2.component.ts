@@ -37,23 +37,23 @@ goNext(qid){
 
 
 this.model.surveyId=this.surveyId;
-  // this.model.questionid=qid;
-  //   this.model.optionid=this.selectedTheme==undefined?'0':this.selectedTheme;
-  //   this.data.saveQuestion(this.model).subscribe(survey=>{       
-  //       this.jsonResponse=JSON.parse(survey._body);
-  //     this.surveyId=this.jsonResponse.surveyId;
-  //     console.log("server responded with surveyId "+this.surveyId); 
-  //     this.data.getServerId(this.surveyId); 
-  //       sessionStorage.setItem("ssn_question2ans", this.model.optionid);
-  //     sessionStorage.setItem("ssn_selectedThemenameq2", this.selectedThemename);
-  //     this.router.navigate(['/userdetail']);
-  //     },err=>{
-  //       console.log(err);
+  this.model.questionid=qid;
+    this.model.optionid=this.selectedTheme==undefined?'0':this.selectedTheme;
+    this.data.saveQuestion(this.model).subscribe(survey=>{       
+        this.jsonResponse=JSON.parse(survey._body);
+      this.surveyId=this.jsonResponse.surveyId;
+      console.log("server responded with surveyId "+this.surveyId); 
+      this.data.getServerId(this.surveyId); 
+        sessionStorage.setItem("ssn_question2ans", this.model.optionid);
+      sessionStorage.setItem("ssn_selectedThemenameq2", this.selectedThemename);
+      this.router.navigate(['userdetail']);
+      },err=>{
+        console.log(err);
           
-  //         return false;
-  //     });
+          return false;
+      });
 
-  this.router.navigate(['/userdetail']);
+  this.router.navigate(['userdetail']);
 }
 
 }

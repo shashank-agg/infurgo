@@ -2,13 +2,15 @@
     margin-top: 20px;
 }
 
-.layout-example  {
+.layout-example {
     min-height: 300px;
     margin: auto;
     position: relative;
     padding: 10px;
     background-color: white;
-    border-top: 5px solid #8b6cc9;
+    border-top: 5px solid #ffd9c0;
+    -webkit-box-shadow: 2px 2px 6px 0px #888888;
+    box-shadow: 2px 2px 6px 0px #888888;
 }
 
 .layout-example:hover .layout-example-image {
@@ -17,6 +19,7 @@
 
 .layout-example-image {
     max-width: 160px;
+    -webkit-transition: .5s ease;
     transition: .5s ease;
 }
 
@@ -28,6 +31,7 @@
     bottom: 0;
     left: 0;
 }
+
 .selected-icon {
     position: absolute;
     top: 0;
@@ -38,22 +42,22 @@
 }
 
 .layout-example .layout-example-overlay {
-	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.70);
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	opacity: 0;
-	overflow: hidden;
-	transition: .5s ease;
-	-moz-transition: .5s ease;
-	-webkit-transition: .5s ease;
-	-o-transition: .5s ease;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.70);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: .5s ease;
+    -moz-transition: .5s ease;
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
 }
 
 .layout-example:hover .layout-example-overlay {
-	opacity: 1;
+    opacity: 1;
 }
 
 .layout-example .layout-example-overlay .layout-example-overlay-inner {
@@ -64,13 +68,15 @@
     right: 0;
     margin: auto;
     height: 50%;
-	padding: 25px;
+    padding: 25px;
 }
+
 .layout-example-overlay-inner h4 {
-	color: #fff;
-	text-transform: uppercase;
-	font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
 }
+
 
 /* 
 .layout-example-overlay-inner .social {
@@ -97,4 +103,8 @@
     font-weight: bold;
     padding: 5px;
     text-transform: uppercase;
+}
+
+.error {
+    min-height: 40px;
 }

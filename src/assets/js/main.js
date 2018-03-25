@@ -1,5 +1,12 @@
 jQuery(document).ready(function($){
-	"use strict";
+    "use strict";
+
+    $('#app-container').fullpage({
+        responsiveWidth: 1250,
+        scrollingSpeed: 600
+        // easing: "swing"
+    });
+
 	var overlayNav = $('.cd-overlay-nav'),
 		overlayContent = $('.cd-overlay-content'),
 		navigation = $('.cd-primary-nav'),

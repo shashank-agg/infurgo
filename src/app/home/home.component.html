@@ -1,230 +1,237 @@
-<div class="introduction" data-parallax="scroll" style='background-image: url("./assets/img/composit.it.jpg");'>
-    <div id="dark-overlay">
-        <div class="align-vertical-center">
-            <h1>Infurgo Designer</h1>
-            <p>Design Your Dream Kitchen in Three Simple Steps</p>
+<div id="home-container">
+    <div class="introduction section" data-parallax="scroll" style='background-image: url("./assets/img/composit.it.jpg");'>
+        <div id="dark-overlay">
+            <div class="align-vertical-center">
+                <h1>Infurgo Designer</h1>
+                <p>Design Your Dream Kitchen in Three Simple Steps</p>
+                <button type="button" class="btn get-started-btn" (click)="getStarted();">Get Started</button>
+            </div>
+        </div>
+    </div>
+    <div class="how_we_work section">
+        <div class="container">
+            <div class="col-md-12 title">
+                <h2 class="text-center">How We Work</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-3  text-center">
+                    <div class="circle bg-2">
+                        <i class="fas fa-user fa-4x my-icon"></i>
+                    </div>
+                    <h3>Provide Your Choices</h3>
+                    <div> Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores
+                        id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.
+                        </div>
+                </div>
+                <div class="col-md-3  text-center">
+                    <div class="circle bg-1">
+                        <i class="fas fa-credit-card fa-4x my-icon"></i>
+                    </div>
+                    <h3>Make Payment</h3>
+                    <div> Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores
+                        id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.
+                        </div>
+                </div>
+                <div class="col-md-3  text-center">
+                    <div class="circle bg-3">
+                        <i class="fas fa-comments fa-4x my-icon"></i>
+                    </div>
+                    <h3>Collaborate with designer </h3>
+                    <div> Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores
+                        id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.
+                        </div>
+                </div>
+                <div class="col-md-3  text-center">
+                    <div class="circle bg-4">
+                        <i class="fas fa-cubes fa-4x my-icon"></i>
+                    </div>
+                    <h3>Receive designs</h3>
+                    <div> Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores
+                        id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.
+                        </div>
+                </div>
+            </div>
+        </div>
+        <!-- End row -->
+        <div class="get-started-btn-2 text-center">
             <button type="button" class="btn get-started-btn" (click)="getStarted();">Get Started</button>
+            <br/>
+        </div>
+    </div>
+
+    <div class="section">
+        <router-outlet></router-outlet>
+    </div>
+
+    <div class="our_work section">
+        <div class="container">
+            <h2 class="main_title">Infurgo Designers Work</h2>
+            <p class="lead styled">
+                Some of our completed projects in detail
+            </p>
+            <!--Team Carousel -->
+            <div class="row">
+                <div class="owl-carousel owl-theme team-carousel">
+
+                    <div class="team-item">
+                        <div class="team-item-img">
+                            <img src="./assets/img/team/carousal-4.jpg" alt="">
+                            <div class="team-item-detail">
+                                <div class="team-item-detail-inner">
+                                    <h4>Mitchell Young</h4>
+                                    <p>Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.</p>
+                                    <ul class="social">
+                                        <li>
+                                            <a href="#0">
+                                                <i class="icon-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#0">
+                                                <i class="icon-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#0">
+                                                <i class="icon-google"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#0">
+                                                <i class="icon-linkedin"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <a href="trainer-profile.html" class="btn_1 white">View Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-item-info">
+                            <h4>Mitchell Young</h4>
+                            <p>CEO</p>
+                        </div>
+                    </div>
+
+                    <div class="team-item">
+                        <div class="team-item-img">
+                            <img src="./assets/img/team/carousal-2.jpg" alt="">
+                            <div class="team-item-detail">
+                                <div class="team-item-detail-inner">
+                                    <h4>Ronald Green</h4>
+                                    <p>Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.</p>
+                                    <ul class="social">
+                                        <li>
+                                            <a href="#0">
+                                                <i class="icon-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#0">
+                                                <i class="icon-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#0">
+                                                <i class="icon-google"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#0">
+                                                <i class="icon-linkedin"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <a href="trainer-profile.html" class="btn_1 white">View Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-item-info">
+                            <h4>Ronald Green</h4>
+                            <p>Business strategy</p>
+                        </div>
+                    </div>
+
+                    <div class="team-item">
+                        <div class="team-item-img">
+                            <img src="./assets/img/team/carousal-4.jpg" alt="">
+                            <div class="team-item-detail">
+                                <div class="team-item-detail-inner">
+                                    <h4>Carl Peppard</h4>
+                                    <p>Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.</p>
+                                    <ul class="social">
+                                        <li>
+                                            <a href="#0">
+                                                <i class="icon-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#0">
+                                                <i class="icon-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#0">
+                                                <i class="icon-google"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#0">
+                                                <i class="icon-linkedin"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <a href="trainer-profile.html" class="btn_1 white">View Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-item-info">
+                            <h4>Carl Peppard</h4>
+                            <p>General Manager</p>
+                        </div>
+                    </div>
+
+                    <div class="team-item">
+                        <div class="team-item-img">
+                            <img src="./assets/img/team/carousal-3.jpg" alt="">
+                            <div class="team-item-detail">
+                                <div class="team-item-detail-inner">
+                                    <h4>Sandra Bullock</h4>
+                                    <p>Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.</p>
+                                    <ul class="social">
+                                        <li>
+                                            <a href="#0">
+                                                <i class="icon-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#0">
+                                                <i class="icon-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#0">
+                                                <i class="icon-google"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#0">
+                                                <i class="icon-linkedin"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <a href="trainer-profile.html" class="btn_1 white">View Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-item-info">
+                            <h4>Sandra Bullock</h4>
+                            <p>Customer support</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--End Team Carousel-->
         </div>
     </div>
 </div>
-<div class="how_we_work">
-    <div class="container">
-        <div class="col-md-12 title">
-            <h2 class="text-center">How We Work</h2>
-        </div>
-        <div class="row">
-            <div class="col-md-3  text-center">
-                <div class="circle bg-2">
-                    <i class="fas fa-user fa-4x my-icon"></i>
-                </div>
-                <h3>Provide Your Choices</h3>
-                <div> Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores
-                    id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. </div>
-            </div>
-            <div class="col-md-3  text-center">
-                <div class="circle bg-1">
-                    <i class="fas fa-credit-card fa-4x my-icon"></i>
-                </div>
-                <h3>Make Payment</h3>
-                <div> Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores
-                    id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. </div>
-            </div>
-            <div class="col-md-3  text-center">
-                <div class="circle bg-3">
-                    <i class="fas fa-comments fa-4x my-icon"></i>
-                </div>
-                <h3>Collaborate with designer </h3>
-                <div> Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores
-                    id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. </div>
-            </div>
-            <div class="col-md-3  text-center">
-                <div class="circle bg-4">
-                    <i class="fas fa-cubes fa-4x my-icon"></i>
-                </div>
-                <h3>Receive designs</h3>
-                <div> Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores
-                    id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. </div>
-            </div>
-        </div>
-    </div>
-    <!-- End row -->
-    <div class="get-started-btn-2 text-center">
-        <button type="button" class="btn get-started-btn" (click)="getStarted();">Get Started</button>
-        <br/>
-    </div>
-</div>
-
-<router-outlet></router-outlet>
-
-<div class="our_work">
-    <div class="container">
-        <h2 class="main_title">Infurgo Designers Work</h2>
-        <p class="lead styled">
-            Some of our completed projects in detail
-        </p>
-        <!--Team Carousel -->
-        <div class="row">
-            <div class="owl-carousel owl-theme team-carousel">
-
-                <div class="team-item">
-                    <div class="team-item-img">
-                        <img src="./assets/img/team/carousal-4.jpg" alt="">
-                        <div class="team-item-detail">
-                            <div class="team-item-detail-inner">
-                                <h4>Mitchell Young</h4>
-                                <p>Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.</p>
-                                <ul class="social">
-                                    <li>
-                                        <a href="#0">
-                                            <i class="icon-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#0">
-                                            <i class="icon-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#0">
-                                            <i class="icon-google"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#0">
-                                            <i class="icon-linkedin"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <a href="trainer-profile.html" class="btn_1 white">View Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-item-info">
-                        <h4>Mitchell Young</h4>
-                        <p>CEO</p>
-                    </div>
-                </div>
-
-                <div class="team-item">
-                    <div class="team-item-img">
-                        <img src="./assets/img/team/carousal-2.jpg" alt="">
-                        <div class="team-item-detail">
-                            <div class="team-item-detail-inner">
-                                <h4>Ronald Green</h4>
-                                <p>Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.</p>
-                                <ul class="social">
-                                    <li>
-                                        <a href="#0">
-                                            <i class="icon-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#0">
-                                            <i class="icon-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#0">
-                                            <i class="icon-google"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#0">
-                                            <i class="icon-linkedin"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <a href="trainer-profile.html" class="btn_1 white">View Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-item-info">
-                        <h4>Ronald Green</h4>
-                        <p>Business strategy</p>
-                    </div>
-                </div>
-
-                <div class="team-item">
-                    <div class="team-item-img">
-                        <img src="./assets/img/team/carousal-4.jpg" alt="">
-                        <div class="team-item-detail">
-                            <div class="team-item-detail-inner">
-                                <h4>Carl Peppard</h4>
-                                <p>Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.</p>
-                                <ul class="social">
-                                    <li>
-                                        <a href="#0">
-                                            <i class="icon-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#0">
-                                            <i class="icon-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#0">
-                                            <i class="icon-google"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#0">
-                                            <i class="icon-linkedin"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <a href="trainer-profile.html" class="btn_1 white">View Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-item-info">
-                        <h4>Carl Peppard</h4>
-                        <p>General Manager</p>
-                    </div>
-                </div>
-
-                <div class="team-item">
-                    <div class="team-item-img">
-                        <img src="./assets/img/team/carousal-3.jpg" alt="">
-                        <div class="team-item-detail">
-                            <div class="team-item-detail-inner">
-                                <h4>Sandra Bullock</h4>
-                                <p>Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.</p>
-                                <ul class="social">
-                                    <li>
-                                        <a href="#0">
-                                            <i class="icon-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#0">
-                                            <i class="icon-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#0">
-                                            <i class="icon-google"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#0">
-                                            <i class="icon-linkedin"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <a href="trainer-profile.html" class="btn_1 white">View Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-item-info">
-                        <h4>Sandra Bullock</h4>
-                        <p>Customer support</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <!--End Team Carousel-->
-    </div>
-</div>
-<!-- End container -->

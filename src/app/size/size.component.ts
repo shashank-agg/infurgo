@@ -44,7 +44,7 @@ export class SizeComponent implements OnInit {
     }
 
     getStarted() {
-        this.router.navigate(['/home/layout']);
+        this.router.navigate(['layout']);
     }
     showSizeComponent(compname: string) {
         // if (compname == 'side1' && (this.selectedImage == '1' || this.selectedImage == '2' || this.selectedImage == '3' || this.selectedImage == '3'))
@@ -86,7 +86,7 @@ export class SizeComponent implements OnInit {
 
     onNext() {
 
-      /*  this.model.questionid = this.questionId;
+        this.model.questionid = this.questionId;
         this.model.side1 = this.side1 == undefined ? '0' : this.side1;
         this.model.side2 = this.side2 == undefined ? '0' : this.side2;
         this.model.side3 = this.side3 == undefined ? '0' : this.side3;
@@ -108,13 +108,13 @@ export class SizeComponent implements OnInit {
                 sessionStorage.setItem("ssn_side3", this.model.side3);
                 sessionStorage.setItem("ssn_side4", this.model.side4);
 
-                this.router.navigate(['/question1']);
+                this.router.navigate(['question1']);
             }, err => {
                 console.log(err);
                 this.showError = true;
                 this.message = "Error Occured !!! Please try later";
                 return false;
-            });*/
-            this.router.navigate(['/question1']);
+            });
+            this.router.navigate(['question1']);
     }
 }

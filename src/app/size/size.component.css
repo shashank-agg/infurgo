@@ -1,10 +1,7 @@
+.question-container {
+    background-color: white;
+}
 
-.lhs-container {
-    display: relative;
-    background-color: #F60;
-	min-height: 460px;
-	color: #fff;
-    text-align: center;
-    height: 100vh;
-	position: relative;
+.image-container {
+    margin-bottom: 30px;
 }

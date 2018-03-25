@@ -15,10 +15,16 @@ export class AppComponent {
     domain = environment.webUrl;
 constructor(private router: Router) {
 }
+
+  getStarted() {
+    this.router.navigate(['/layout']);
+    // console.log("yolo", $);
+    // $.fn.fullpage.moveTo(3);
+  }
+
   showHome(){
-    this.router.navigate(['/home']);
-    myExtObject.closeLayer();
-   
+    this.router.navigate(['/']);
+    myExtObject.closeLayer();   
   }
   
   showLayout(){

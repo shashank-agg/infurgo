@@ -1,72 +1,65 @@
-<main>
-		<div id="form_container">
-			<div class="row">
-				<div class="col-md-5">
-					<div id="left_form">
-						<figure><img src="./assets/img/registration_bg.svg" alt=""></figure>
-						<h2>Meeting Detail</h2>
-						<p>Meeting date and time</p>
-					</div>
-				</div>
-				<div class="col-md-7">
+<div class="question-container">
+    <div class="col-md-4 lhs-container">
+        <div class="lhs-content">
+            <figure>
+                <img src="./assets/img/registration_bg.svg" alt="">
+            </figure>
+            <h2>Meeting Detail</h2>
+            <p>Meeting date and time</p>
+        </div>
+    </div>
+    <div class="col-md-8 rhs-container">
+        <div id="wizard_container">
+            <!-- /top-wizard -->
+            <form name="example-1" id="wrapped" method="POST">
+                <!-- Leave for security protection, read docs for details -->
+                <div id="middle-wizard">
 
-					<div id="wizard_container">
-						<div id="top-wizard">
-							<div id="progressbar"></div>
-						</div>
-						<!-- /top-wizard -->
-						<form name="example-1" id="wrapped" method="POST">
-							<input id="website" name="website" type="text" value="">
-							<!-- Leave for security protection, read docs for details -->
-							<div id="middle-wizard">
+                    <div class="step">
+                        <h3 class="main_question">Please select online meeting date/time</h3>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <span *ngIf="showErrorDate" class="error">{{messageDate}}</span>
+                                    <input class="form-control required" type="text" #startDate (focus)='removeError()' (click)="getMeetingTimeSlot(startDate.value)"
+                                        name="meetingDate" id="meetingDate" placeholder="Online Meeting Date">
+                                </div>
+                            </div>
 
-								<div class="step">
-									<h3 class="main_question">Please select online meeting date/time</h3>
-									<div class="row">
-										<div class="col-sm-12">
-											<div class="form-group">
-												<span *ngIf="showErrorDate" class="error">{{messageDate}}</span>
-												<input class="form-control required" type="text" #startDate (focus)='removeError()' (click)="getMeetingTimeSlot(startDate.value)" 
-												name="meetingDate" id="meetingDate" 
-												placeholder="Online Meeting Date">
-											</div>
-										</div>
-										
-									</div>
+                        </div>
 
-									<div class="row">
-										<div class="col-sm-12">
-											<div class="form-group">
-												<div class="styled-select">
-													<span *ngIf="showErrorTimeslot" class="error">{{messageTimeslot}}</span>
-													<select class="required" name="meetingTime" [(ngModel)]="selectedTimeSlot" (focus)='removeError()'>
-														<option value="" selected>Available time slots</option>
-														 <option *ngFor="let timeslot of timeslots" value= {{timeslot.timeSlotId}} [style.color] = "timeslot.availableSlot > 0 ? '' : 'red'" [disabled] = "!timeslot.availableSlot">
-															{{timeslot.timeslot}} ({{timeslot.availableSlot}} out of {{timeslot.totalSlot}} Available)
-														</option>
-													</select>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- /row -->
-								</div>
-								<!-- /step-->
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <div class="styled-select">
+                                        <span *ngIf="showErrorTimeslot" class="error">{{messageTimeslot}}</span>
+                                        <select class="required" name="meetingTime" [(ngModel)]="selectedTimeSlot" (focus)='removeError()'>
+                                            <option value="" selected>Available time slots</option>
+                                            <option *ngFor="let timeslot of timeslots" value={ {timeslot.timeSlotId}} [style.color]="timeslot.availableSlot > 0 ? '' : 'red'"
+                                                [disabled]="!timeslot.availableSlot">
+                                                {{timeslot.timeslot}} ({{timeslot.availableSlot}} out of {{timeslot.totalSlot}} Available)
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /row -->
+                    </div>
+                    <!-- /step-->
 
-							
-								<!-- /step-->
-							</div>
-							<!-- /middle-wizard -->
-							<div id="bottom-wizard">
-								<button type="button" name="backward" class="backward" [routerLink]="['/userdetail']">Previous </button>
-								<button type="button" name="forward" class="forward" (click)="saveMeeting();">Submit Payment</button>
-								
-							</div>
-							<!-- /bottom-wizard -->
-						</form>
-					</div>
-					<!-- /Wizard container -->
-				</div>
-			</div><!-- /Row -->
-		</div><!-- /Form_container -->
-	</main>
+
+                    <!-- /step-->
+                </div>
+                <!-- /middle-wizard -->
+                <div id="bottom-wizard">
+                    <button type="button" name="backward" class="backward" [routerLink]="['/userdetail']">Previous </button>
+                    <button type="button" name="forward" class="forward" (click)="saveMeeting();">Submit Payment</button>
+
+                </div>
+                <!-- /bottom-wizard -->
+            </form>
+        </div>
+        <!-- /Wizard container -->
+    </div>
+</div>

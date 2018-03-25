@@ -6,7 +6,7 @@
 	var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
 
 	var checkin = $('#meetingDate').datepicker({
-	  format:'dd/mm/yyyy',
+      format:'dd/mm/yyyy',
 		onRender: function(date) {
 		return date.valueOf() < now.valueOf() ? 'disabled' : '';
 	  }

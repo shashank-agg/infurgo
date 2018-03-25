@@ -34,40 +34,41 @@ import { AuthGuard } from '../guards/auth.guard';
 
 
 const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent ,
-    children: [
-        {path: '', component: LayoutComponent},
-        {path: 'layout', component: LayoutComponent},
-        {path: 'size', component: SizeComponent},
-        {path: 'question1', component: Question1Component},
-        {path: 'question2', component: Question2Component},
-        {path: 'userdetail', component: UserdetailComponent},
-        {path: 'meetingdetail', component: MeetingdetailComponent},
-        {path: 'thanku', component: ThankuComponent},
-    ]
-    },
-//   { path: 'layout', component: LayoutComponent },
-  //{ path: 'size', component: SizeComponent, canActivate: [AuthGuard] },
-  //{ path: 'upload', component: UploadComponent, canActivate: [AuthGuard] },
-  //{ path: 'question1', component: Question1Component, canActivate: [AuthGuard] },
-  //{ path: 'question2', component: Question2Component, canActivate: [AuthGuard] },
+//   { path: 'home', component: HomeComponent ,
+//     children: [
+//         {path: '', component: LayoutComponent},
+//         {path: 'layout', component: LayoutComponent},
+//         {path: 'size', component: SizeComponent},
+//         {path: 'question1', component: Question1Component},
+//         {path: 'question2', component: Question2Component},
+//         {path: 'userdetail', component: UserdetailComponent},
+//         {path: 'meetingdetail', component: MeetingdetailComponent},
+//         {path: 'thanku', component: ThankuComponent},
+//     ]
+//     },
+  { path: 'layout', component: LayoutComponent },
+  { path: 'size', component: SizeComponent, canActivate: [AuthGuard] },
+//   //{ path: 'upload', component: UploadComponent, canActivate: [AuthGuard] },
+  { path: 'question1', component: Question1Component, canActivate: [AuthGuard] },
+  { path: 'question2', component: Question2Component, canActivate: [AuthGuard] },
 
-//    { path: 'size', component: SizeComponent},
-  { path: 'upload', component: UploadComponent},
-//   { path: 'question1', component: Question1Component},
-//   { path: 'question2', component: Question2Component},
+// //    { path: 'size', component: SizeComponent},
+//   { path: 'upload', component: UploadComponent},
+// //   { path: 'question1', component: Question1Component},
+// //   { path: 'question2', component: Question2Component},
 
-  { path: 'question3', component: Question3Component },
-//   { path: 'userdetail', component: UserdetailComponent },
-//   { path: 'meetingdetail', component: MeetingdetailComponent },
-  { path: 'startmeeting/:id', component: StartmeetingComponent },
-  { path: 'contactus', component: ContactusComponent },
-//   { path: 'thanku', component: ThankuComponent },
-  { path: 'failure', component: FailureComponent },
-  { path: 'designerlogin', component: DesignerloginComponent },
-  { path: 'meetinglist', component: MeetinglistComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', redirectTo: '/home', pathMatch: 'full' }
+//   { path: 'question3', component: Question3Component },
+  { path: 'userdetail', component: UserdetailComponent },
+  { path: 'meetingdetail', component: MeetingdetailComponent },
+//   { path: 'startmeeting/:id', component: StartmeetingComponent },
+//   { path: 'contactus', component: ContactusComponent },
+  { path: 'thanku', component: ThankuComponent },
+//   { path: 'failure', component: FailureComponent },
+//   { path: 'designerlogin', component: DesignerloginComponent },
+//   { path: 'meetinglist', component: MeetinglistComponent },
+//   { path: '', component: AppComponent, pathMatch: 'full' },
+// //   { path: '**', component: AppComponent, pathMatch: 'full' }
+{ path: '', redirectTo: '/layout', pathMatch: 'full' },
 
 ]
 

@@ -25,11 +25,8 @@ export class LayoutComponent implements OnInit, AfterViewInit {
     this.model = new SurveyRequestDto();
   }
 
+  //Moved this code to ngOnInit to fix "ExpressionChangedAfterItHasBeenCheckedError' error
   ngAfterViewInit() {
-    if (sessionStorage.getItem("ssn_selectedLayout") != undefined) {
-      this.radioData = sessionStorage.getItem("ssn_selectedLayout");
-      this.showChecked[parseInt(this.radioData, 10) - 1] = true;
-    }
   }
 
   ngOnInit() {
@@ -37,9 +34,14 @@ export class LayoutComponent implements OnInit, AfterViewInit {
     this.data.surveyIdObserver.subscribe(serverId => this.surveyId = serverId)
     //$.getScript('../../assets/js/functions.js');
     $.getScript('assets/js/functions.js');
+    if (sessionStorage.getItem("ssn_selectedLayout") != undefined) {
+        this.radioData = sessionStorage.getItem("ssn_selectedLayout");
+        this.showChecked[parseInt(this.radioData, 10) - 1] = true;
+    }
   }
 
   showTick(x) {
+    //   return true;
     return this.showChecked[parseInt(x, 10) - 1];
   }
 
@@ -86,7 +88,7 @@ export class LayoutComponent implements OnInit, AfterViewInit {
         }
         sessionStorage.setItem("ssn_surveyId", this.surveyId);
         sessionStorage.setItem("ssn_selectedLayout", this.radioData);
-        this.router.navigate(['home/size']);
+        this.router.navigate(['size']);
       }, err => {
         console.log(err);
         this.showError = true;
@@ -94,7 +96,7 @@ export class LayoutComponent implements OnInit, AfterViewInit {
         return false;
       });
       console.log(this.router)
-      this.router.navigate(['home/size']);
+      this.router.navigate(['size']);
   }
 
 }
