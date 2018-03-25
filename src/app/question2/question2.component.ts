@@ -29,7 +29,7 @@ export class Question2Component implements OnInit {
         }
   }
  setSelectedTheme(e: any,s:any) {
-    this.selectedTheme = e.target.value;
+    this.selectedTheme = e.target.getAttribute("data-value");
     this.selectedThemename=s;
   }
 
@@ -46,14 +46,14 @@ this.model.surveyId=this.surveyId;
       this.data.getServerId(this.surveyId); 
         sessionStorage.setItem("ssn_question2ans", this.model.optionid);
       sessionStorage.setItem("ssn_selectedThemenameq2", this.selectedThemename);
-      this.router.navigate(['userdetail']);
+      this.router.navigate(['home/userdetail']);
       },err=>{
         console.log(err);
           
           return false;
       });
 
-  this.router.navigate(['userdetail']);
+  this.router.navigate(['home/userdetail']);
 }
 
 }

@@ -88,7 +88,7 @@ export class LayoutComponent implements OnInit, AfterViewInit {
         }
         sessionStorage.setItem("ssn_surveyId", this.surveyId);
         sessionStorage.setItem("ssn_selectedLayout", this.radioData);
-        this.router.navigate(['size']);
+        this.router.navigate(['home/size']);
       }, err => {
         console.log(err);
         this.showError = true;
@@ -96,7 +96,7 @@ export class LayoutComponent implements OnInit, AfterViewInit {
         return false;
       });
       console.log(this.router)
-      this.router.navigate(['size']);
+      this.router.navigate(['home/size']);
   }
 
 }

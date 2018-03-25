@@ -1,16 +1,51 @@
-		<div class="question-container">
-				<div class="col-md-4 lhs-container">
-					<div class="lhs-content">
-						<figure><img src="./assets/img/registration_bg.svg" alt=""></figure>
-						<h2>Kitchen Optimization</h2>
-						<p>You can optimize your kitchen to have more storage or for looks as primary requirement.</p>
-					</div>
-				</div>
-				<div class="col-md-8 rhs-container">
-					<div id="wizard_container">
+<div class="question-container">
+    <div class="col-md-4 lhs-container">
+        <div class="lhs-content">
+            <figure>
+                <img src="./assets/img/registration_bg.svg" alt="">
+            </figure>
+            <h2>Kitchen Optimization</h2>
+            <p>You can optimize your kitchen to have more storage or for looks as primary requirement.</p>
+        </div>
+    </div>
+    <div class="col-md-8 rhs-container container">
+            <h3 class="main_question"><strong>4/4</strong>Please choose the optimization parameter for your Kitchen </h3>
+        <div class="row text-center">
+            <div class="col-xs-12 col-sm-6">
+                <div class="optimization-container" data-value="9" (click)="setSelectedTheme($event,'option1')">
+                    <h4>Design</h4>
+                    Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan Lorem ipsum dolor sit amet, in porro albucius
+                    qui, in nec quod novum accumsan Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum
+                    accumsan
+                    <div *ngIf="selectedThemename=='option1'" class="sibling-overlay">
+                        <i class="fas fa-4x fa-check-circle"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="optimization-container" data-value="10" (click)="setSelectedTheme($event,'option2')">
+                    <h4>Storage</h4>
+                    Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan Lorem ipsum dolor sit amet, in porro albucius
+                    qui, in nec quod novum accumsan Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum
+                    accumsan
+                    <div *ngIf="selectedThemename=='option2'" class="sibling-overlay">
+                        <i class="fas fa-4x fa-check-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="bottom-wizard">
+            <button type="button" name="backward" class="backward" [routerLink]="['/home/question1']">Previous </button>
+            <button type="button" name="forward" class="forward" (click)="goNext(5)">Next</button>
+        </div>
+
+
+
+
+        <!-- <div id="wizard_container">
 						<form name="example-1" id="wrapped" method="POST">
 							<input id="website" name="website" type="text" value="">
-							<!-- Leave for security protection, read docs for details -->
 							<div id="middle-wizard">
 
 								<div class="step">
@@ -27,22 +62,15 @@
 										</div>
 										
 									</div>
-									<!-- /row -->
 								</div>
-								<!-- /step-->
-
-							
-								<!-- /step-->
 							</div>
-							<!-- /middle-wizard -->
 							<div id="bottom-wizard">
 								<button type="button" name="backward" class="backward" [routerLink]="['/question1']">Previous </button>
-								<button type="button" name="forward" class="forward" (click)="goNext(5)">Next</button>
-								
+								<button type="button" name="forward" class="forward" (click)="goNext(5)">Next</button>								
 							</div>
-							<!-- /bottom-wizard -->
 						</form>
-					</div>
-					<!-- /Wizard container -->
-				</div>
-		</div>
+                    </div> -->
+
+        <!-- /Wizard container -->
+    </div>
+</div>

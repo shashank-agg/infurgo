@@ -1,3 +1,12 @@
+
+.header {
+    height: 10vh;
+}
+
+.header .logo-image {
+    width: 110px;
+}
+
 /* Intoduction section */
 .introduction {
     min-height: 90vh;
@@ -93,11 +102,43 @@
     /* background-color: #f0f8ff; */
 }
 
+.contact-us {
+    height: 100vh;
+}
+
 .our_work {
-    background: #ffe2c1;
-    height: 90vh;
+    background-color: #ffe4c1;
+    height: 100vh;
+    position: relative;
+}
+
+.our_work .container {
+    height: 100vh;
 }
 
 .our_work .main_title {
     margin-top: 30px;
+}
+
+.footer-container {
+    /* height: 10vh; */
+    /* position: absolute;
+    bottom: 0;
+    width: 100%; */
+}
+.footer-container a {
+    color: #777;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.footer-container a:after {
+    content: "|";
+    font-weight: 300;
+    position: relative;
+    left: 9px;
+}
+
+.footer-container a:last-child:after {
+    content: "";
 }

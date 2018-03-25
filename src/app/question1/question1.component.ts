@@ -49,12 +49,12 @@ export class Question1Component implements OnInit {
             this.data.getServerId(this.surveyId);
             sessionStorage.setItem("ssn_question1ans", this.model.optionid);
             sessionStorage.setItem("ssn_selectedThemename", this.selectedThemename);
-            this.router.navigate(['question2']);
+            this.router.navigate(['home/question2']);
         }, err => {
             console.log(err);
             return false;
         });
-        this.router.navigate(['question2']);
+        this.router.navigate(['home/question2']);
     }
 
 }

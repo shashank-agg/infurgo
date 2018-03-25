@@ -1,3 +1,29 @@
 .radio_input * {
     margin-right: 10px;
 }
+
+.optimization-container {
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px 0px #c3c3c3;
+    position: relative;
+}
+
+.optimization-container h4 {
+    text-transform: uppercase;    
+}
+
+.optimization-container:hover {
+    background-color: whitesmoke;
+}
+
+.sibling-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-color: #ffffffad;
+    padding: 10% 0;
+}

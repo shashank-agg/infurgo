@@ -1,38 +1,51 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router'
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { environment } from '../../environments/environment';
+import 'menuLayer.js'
+
+declare var myExtObject: any;
+declare var $ :any;
 
 @Component({
-  selector: '',
+  selector: 'app-root',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
-domain = environment.webUrl;
-  constructor(
-    private router: Router
-  ) {
-    sessionStorage.removeItem("ssn_surveyId");
-    sessionStorage.removeItem("ssn_selectedLayout");
-    sessionStorage.removeItem("ssn_side1");
-    sessionStorage.removeItem("ssn_side2");
-    sessionStorage.removeItem("ssn_side3");
-    sessionStorage.removeItem("ssn_side4");
-    sessionStorage.removeItem("ssn_question1ans");
-    sessionStorage.removeItem("ssn_question2ans");
-    sessionStorage.removeItem("ssn_selectedThemename");
-    sessionStorage.removeItem("ssn_selectedThemenameq2");
-    sessionStorage.removeItem("ssn_clientfirstname");
-    sessionStorage.removeItem("ssn_clientlastname");
-    sessionStorage.removeItem("ssn_clientemail");
-    sessionStorage.removeItem("ssn_clientmobile");
-  }
-
-  ngOnInit() {
-  }
+export class HomeComponent {
+  title = 'app';
+    domain = environment.webUrl;
+constructor(private router: Router) {
+}
 
   getStarted() {
-    this.router.navigate(['/layout']);
+    this.router.navigate(['home/layout']);
+    // console.log("yolo", $);
+    $.fn.fullpage.moveTo(3);
+  }
+
+  showHome(){
+    this.router.navigate(['/home']);
+    myExtObject.closeLayer();   
+  }
+  
+  showLayout(){
+    this.router.navigate(['/home/layout']);
+    myExtObject.closeLayer();
+  }
+
+  showDesignerLogin(){
+    this.router.navigate(['/designerlogin']);
+    myExtObject.closeLayer();
+  }
+
+  showClientLogin(){
+    this.router.navigate(['/clientlogin']);
+    myExtObject.closeLayer();
+  }
+
+  showContactUs(){
+    this.router.navigate(['/home#contactus']);
+    myExtObject.closeLayer();
   }
 
 }

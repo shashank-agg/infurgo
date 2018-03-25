@@ -81,14 +81,14 @@ export class UserdetailComponent implements OnInit {
             sessionStorage.setItem("ssn_clientlastname", this.model.lastName);
             sessionStorage.setItem("ssn_clientemail", this.model.email);
             sessionStorage.setItem("ssn_clientmobile", this.model.mobile);
-            this.router.navigate(['meetingdetail']);
+            this.router.navigate(['home/meetingdetail']);
         }, err => {
             console.log(err);
             this.showErrorFirstName = true;
             this.messageFirstName = "Error Occured !!! Please try later";
             return false;
         });
-        this.router.navigate(['meetingdetail']);
+        this.router.navigate(['home/meetingdetail']);
     }
 
 }

@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: whitesmoke;
 }
 .question-container h4 {
     margin-top: 0;

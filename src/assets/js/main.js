@@ -3,7 +3,8 @@ jQuery(document).ready(function($){
 
     $('#app-container').fullpage({
         responsiveWidth: 1250,
-        scrollingSpeed: 600
+        scrollingSpeed: 600,
+        anchors: ['', 'how-we-work', 'design', 'our-work', 'contact-us'],
         // easing: "swing"
     });
 
@@ -20,40 +21,41 @@ jQuery(document).ready(function($){
 
 	//open/close the menu and cover layers
 	toggleNav.on('click', function(){
-
 		menuLayer();
+        // window.requestAnimationFrame(layerInit);
 
 	});
 
 	function layerInit(){
 		var diameterValue = (Math.sqrt( Math.pow($(window).height(), 2) + Math.pow($(window).width(), 2))*2);
-		overlayNav.children('span').velocity({
-			scaleX: 0,
-			scaleY: 0,
-			translateZ: 0,
-		}, 50).velocity({
-			height : diameterValue+'px',
-			width : diameterValue+'px',
-			top : -(diameterValue/2)+'px',
-			left : -(diameterValue/2)+'px',
-		}, 0);
+		// overlayNav.children('span').velocity({
+		// 	scaleX: 0,
+		// 	scaleY: 0,
+		// 	translateZ: 0,
+        // }, 50)
+        // .velocity({
+		// 	height : diameterValue+'px',
+		// 	width : diameterValue+'px',
+		// 	top : -(diameterValue/2)+'px',
+		// 	left : -(diameterValue/2)+'px',
+		// }, 0);
 
-		overlayContent.children('span').velocity({
-			scaleX: 0,
-			scaleY: 0,
-			translateZ: 0,
-		}, 50).velocity({
-			height : diameterValue+'px',
-			width : diameterValue+'px',
-			top : -(diameterValue/2)+'px',
-			left : -(diameterValue/2)+'px',
-		}, 0);
+		// overlayContent.children('span').velocity({
+		// 	scaleX: 0,
+		// 	scaleY: 0,
+		// 	translateZ: 0,
+		// }, 50).velocity({
+		// 	height : diameterValue+'px',
+		// 	width : diameterValue+'px',
+		// 	top : -(diameterValue/2)+'px',
+		// 	left : -(diameterValue/2)+'px',
+		// }, 0);
 	}
 });
 
-$('.animated_link').on('click', function(){
-		menuLayer();
-	});
+// $('.animated_link').on('click', function(){
+// 		menuLayer();
+// 	});
 
 
 
@@ -74,7 +76,7 @@ var overlayNav = $('.cd-overlay-nav'),
 				translateZ: 0,
 				scaleX: 1,
 				scaleY: 1,
-			}, 500, 'easeInCubic', function(){
+			}, 50, 'easeInCubic', function(){
 				navigation.addClass('fade-in');
 			});
 			
@@ -87,7 +89,7 @@ var overlayNav = $('.cd-overlay-nav'),
 				translateZ: 0,
 				scaleX: 1,
 				scaleY: 1,
-			}, 500, 'easeInCubic', function(){
+			}, 50, 'easeInCubic', function(){
 				navigation.removeClass('fade-in');
 				
 				overlayNav.children('span').velocity({

@@ -88,7 +88,7 @@ export class MeetingdetailComponent implements OnInit {
         this.data.saveMeetingTimeSlot(this.model).subscribe(
             survey => {
                 this.jsonResponse = JSON.parse(survey._body);
-                // this.router.navigate(['thanku']);
+                // this.router.navigate(['home/thanku']);
                 console.log(this.jsonResponse);
                 this.serveyId = this.jsonResponse.surveyId;
                 sessionStorage.removeItem("ssn_surveyId");
@@ -113,7 +113,7 @@ export class MeetingdetailComponent implements OnInit {
                 return false;
             });
         console.log(this.serveyId);*/
-        this.router.navigate(['thanku']);
+        this.router.navigate(['home/thanku']);
 
     }
 
