@@ -70,7 +70,6 @@ var overlayNav = $('.cd-overlay-nav'),
 			
 			//it means navigation is not visible yet - open it and animate navigation layer
             toggleNav.addClass('close-nav');
-            console.log(toggleNav.children("div"));
             toggleNav.children("div").addClass("open")
 			
 			// overlayNav.children('span').velocity({
@@ -86,7 +85,6 @@ var overlayNav = $('.cd-overlay-nav'),
 			//navigation is open - close it and remove navigation layer
 			
 			toggleNav.removeClass('close-nav');
-            console.log(toggleNav.children("div"));
             toggleNav.children("div").removeClass("open")
             navigation.removeClass('fade-in')
             

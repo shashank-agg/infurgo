@@ -20,16 +20,23 @@ constructor(private router: Router) {
   getStarted() {
     this.router.navigate(['home/layout']);
     // console.log("yolo", $);
-    $.fn.fullpage.moveTo(3);
+    // $.fn.fullpage.moveTo(3);
+    $('html, body').animate({
+        scrollTop: $(".design-layout").offset().top
+    });
   }
 
   showHome(){
-    this.router.navigate(['/home']);
+    this.router.navigate(['/home123']);
     myExtObject.closeLayer();   
   }
   
   showLayout(){
     this.router.navigate(['/home/layout']);
+    // $.fn.fullpage.moveTo(3);
+    $('html, body').animate({
+        scrollTop: $(".design-layout").offset().top
+    });
     myExtObject.closeLayer();
   }
 
