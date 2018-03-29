@@ -1,10 +1,8 @@
-<div class="question-container container-fluid no-margin-padding">
+<div class="question-container no-margin-padding">
     <div class="row">
         <div class="col-md-4 no-margin-padding lhs-container">
             <div class="lhs-content">
-                <figure>
-                    <img src="./assets/img/registration_bg.svg" alt="">
-                </figure>
+                <img src="./assets/img/registration_bg.svg" alt="">
                 <h2>Kitchen Layout</h2>
                 <p>The Kitchen layout is the structure of the kitchen. You can choose it based on the type of kitchen you need
                     in the room. </p>
@@ -17,14 +15,14 @@
             </div>
 
             <div class="row">
-                <div class="padding-10 text-center col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <div class="padding-10 text-center col-xs-6 col-sm-6 col-md-6 col-lg-3">
                     <span *ngIf="showError" class="error">{{message}}</span>
                     <div class="layout-example">
                         <div class="layout-example-title">
                             U Shape Kitchen
                         </div>
-                        <img class="layout-example-image" src="./assets/img/1.png" alt="">
-                        <div class="layout-example-description">
+                        <img class="layout-example-image" src="./assets/img/layouts/U.jpeg" alt="">
+                        <div class="layout-example-description hidden-xs">
                             The kitchen layout is the shape that is made by the arrangement of the countertop, major appliances and storage areas.
                         </div>
                         <div *ngIf="showTick(1)" class="layout-selected">
@@ -40,13 +38,13 @@
                     </div>
                 </div>
 
-                <div class="padding-10 text-center col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <div class="padding-10 text-center col-xs-6 col-sm-6 col-md-6 col-lg-3">
                     <div class="layout-example">
                         <div class="layout-example-title">
                             L Shape Kitchen
                         </div>
-                        <img class="layout-example-image" src="./assets/img/2.png" alt="">
-                        <div class="layout-example-description">
+                        <img class="layout-example-image" src="./assets/img/layouts/L.jpeg" alt="">
+                        <div class="layout-example-description hidden-xs">
                             The kitchen layout is the shape that is made by the arrangement of the countertop, major appliances and storage areas.
                         </div>
                         <div *ngIf="showTick(2)" class="layout-selected">
@@ -62,13 +60,13 @@
                     </div>
                 </div>
 
-                <div class="padding-10 text-center col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <div class="padding-10 text-center col-xs-6 col-sm-6 col-md-6 col-lg-3">
                     <div class="layout-example">
                         <div class="layout-example-title">
                             Straight Kitchen
                         </div>
-                        <img class="layout-example-image" src="./assets/img/3.png" alt="">
-                        <div class="layout-example-description">
+                        <img class="layout-example-image" src="./assets/img/layouts/Straight.jpeg" alt="">
+                        <div class="layout-example-description hidden-xs">
                             The kitchen layout is the shape that is made by the arrangement of the countertop, major appliances and storage areas.
                         </div>
                         <div *ngIf="showTick(3)" class="layout-selected">
@@ -84,13 +82,13 @@
                     </div>
                 </div>
 
-                <div class="padding-10 text-center col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <div class="padding-10 text-center col-xs-6 col-sm-6 col-md-6 col-lg-3">
                     <div class="layout-example">
                         <div class="layout-example-title">
                             Parallel Kitchen
                         </div>
-                        <img class="layout-example-image" src="./assets/img/4.png" alt="">
-                        <div class="layout-example-description">
+                        <img class="layout-example-image" src="./assets/img/layouts/Parallel.jpeg" alt="">
+                        <div class="layout-example-description hidden-xs">
                             The kitchen layout is the shape that is made by the arrangement of the countertop, major appliances and storage areas.
                         </div>
                         <div *ngIf="showTick(4)" class="layout-selected">
@@ -105,78 +103,6 @@
                         </div>
                     </div>
                 </div>
-
-
-                <!-- Unused from here on -->
-
-                <!-- <div class="padding-10 text-center col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <div class="layout-example">
-                        <div class="layout-example-title">
-                            L Shape Kitchen
-                        </div>
-                        <div class="layout-example-images">
-                            <img class="layout-example-image" src="./assets/img/2.png" alt="">
-                            <div *ngIf="showTick(2)">
-                                <img src="./assets/img/tick.png" style="background-color: transparent;position: absolute;top: 30px;left:5px;" alt="">
-                            </div>
-
-                            <div *ngIf="!showTick(2)" class="layout-example-overlay">
-                                <input type="hidden" name="kitchenType" [(ngModel)]="radioData" id="kitchenType2" [value]="2">
-                                <div class="layout-example-overlay-inner">
-                                    <h4>L Shape Kitchen</h4>
-                                    <p class="btn_1 white" (click)="selectRadio(2);">Select</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="padding-10 text-center col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <div class="layout-example">
-                        <div class="layout-example-title">
-                            Straight Kitchen
-                        </div>
-                        <div class="layout-example-images">
-                            <img class="layout-example-image" src="./assets/img/3.png" alt="">
-                            <div *ngIf="showTick(3)">
-                                <img src="./assets/img/tick.png" style="background-color: transparent;position: absolute;top: 30px;left:5px;" alt="">
-
-                            </div>
-                            <div *ngIf="!showTick(3)" class="layout-example-overlay">
-                                <input type="hidden" name="kitchenType" [(ngModel)]="radioData" id="kitchenType3" [value]="3">
-                                <div class="layout-example-overlay-inner">
-                                    <h4>Straight Kitchen</h4>
-                                    <p class="btn_1 white" (click)="selectRadio(3);">Select</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="padding-10 text-center col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <div class="layout-example">
-                        <div class="layout-example-title">
-                            Parallel Kitchen
-                        </div>
-                        <div class="layout-example-images">
-                            <img class="layout-example-image" src="./assets/img/4.png" alt="">
-                            <div *ngIf="showTick(4)">
-                                <img src="./assets/img/tick.png" style="background-color: transparent;position: absolute;top: 30px;left:5px;" alt="">
-
-                            </div>
-                            <div *ngIf="!showTick(4)" class="layout-example-overlay">
-                                <input type="hidden" name="kitchenType" [(ngModel)]="radioData" id="kitchenType4" [value]="4">
-                                <div class="layout-example-overlay-inner">
-                                    <h4>Parallel Kitchen</h4>
-                                    <p class="btn_1 white" (click)="selectRadio(4);">Select</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
-                <!-- Unused ends here -->
 
             </div>
             <!-- /row -->

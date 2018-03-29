@@ -7,7 +7,7 @@ declare var myExtObject: any;
 declare var $ :any;
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
@@ -25,34 +25,4 @@ constructor(private router: Router) {
         scrollTop: $(".design-layout").offset().top
     });
   }
-
-  showHome(){
-    this.router.navigate(['/home123']);
-    myExtObject.closeLayer();   
-  }
-  
-  showLayout(){
-    this.router.navigate(['/home/layout']);
-    // $.fn.fullpage.moveTo(3);
-    $('html, body').animate({
-        scrollTop: $(".design-layout").offset().top
-    });
-    myExtObject.closeLayer();
-  }
-
-  showDesignerLogin(){
-    this.router.navigate(['/designerlogin']);
-    myExtObject.closeLayer();
-  }
-
-  showClientLogin(){
-    this.router.navigate(['/clientlogin']);
-    myExtObject.closeLayer();
-  }
-
-  showContactUs(){
-    this.router.navigate(['/home#contactus']);
-    myExtObject.closeLayer();
-  }
-
 }

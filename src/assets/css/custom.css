@@ -26,9 +26,12 @@
     /* background-color: #ebf0f6 */
 }
 
+.question-container .row {
+    margin: 0px;
+}
 .question-container .lhs-container {
     background-color: #F60;
-    min-height: 460px;
+    /* min-height: 460px; */
     color: #fff;
     text-align: center;
     height: 100vh;
@@ -49,3 +52,24 @@
 .question-container .rhs-container {
     padding: 50px;
 }
+
+@media (max-width: 576px) {
+    .question-container .rhs-container {
+        padding: 10px;
+    }
+    .question-container .lhs-container {
+        height: 50vh;
+    }
+    .question-container .lhs-container .lhs-content {
+        height: 100%;
+    }
+    .question-container .lhs-container .lhs-content img{
+        width: 30vw;
+    }
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 992px) {}
+
+@media (max-width: 1200px) {}

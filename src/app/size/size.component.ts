@@ -65,7 +65,7 @@ export class SizeComponent implements OnInit {
             this.side2 = parseInt((this.side2==undefined?0:this.side2),10) + 1;
         }else if(side=='side3'){
             this.side3 = parseInt((this.side3==undefined?0:this.side3),10) + 1;
-        }else if(side=='side2'){
+        }else if(side=='side4'){
             this.side4 = parseInt((this.side4==undefined?0:this.side4),10) + 1;
         }
 
@@ -78,7 +78,7 @@ export class SizeComponent implements OnInit {
             this.side2 = parseInt((this.side2==undefined?0:this.side2),10) - 1;
         }else if(side=='side3'){
             this.side3 = parseInt((this.side3==undefined?0:this.side3),10) - 1;
-        }else if(side=='side2'){
+        }else if(side=='side4'){
             this.side4 = parseInt((this.side4==undefined?0:this.side4),10) - 1;
         }
 

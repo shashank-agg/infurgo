@@ -3,6 +3,7 @@ import { DataService } from '../service/data.service';
 import { SurveyRequestDto } from '../dto/survey-request-dto';
 import { Router } from '@angular/router';
 
+declare var $: any;
 @Component({
     selector: 'app-question1',
     templateUrl: './question1.component.html',
@@ -30,9 +31,15 @@ export class Question1Component implements OnInit {
             this.selectedTheme = sessionStorage.getItem("ssn_question1ans") == undefined ? '0' : sessionStorage.getItem("ssn_question1ans");
             this.selectedThemename = sessionStorage.getItem("ssn_selectedThemename");
         }
+        $('.img1').magnificPopup(
+            {
+                type: 'image',
+                closeOnContentClick: true
+            }
+        );
     }
     setSelectedTheme(e: any, s: any) {
-        this.selectedTheme = e.target.value;
+        this.selectedTheme = e;
         this.selectedThemename = s;
     }
 

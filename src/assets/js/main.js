@@ -1,12 +1,12 @@
 jQuery(document).ready(function($){
     "use strict";
 
-    $('#app-container').fullpage({
-        responsiveWidth: 1250,
-        scrollingSpeed: 600,
-        anchors: ['', 'how-we-work', 'design', 'our-work', 'contact-us'],
-        // easing: "swing"
-    });
+    // $('#app-container').fullpage({
+    //     responsiveWidth: 1250,
+    //     scrollingSpeed: 600,
+    //     anchors: ['', 'how-we-work', 'design', 'our-work', 'contact-us'],
+    //     // easing: "swing"
+    // });
 
 	var overlayNav = $('.cd-overlay-nav'),
 		overlayContent = $('.cd-overlay-content'),

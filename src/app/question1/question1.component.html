@@ -9,52 +9,66 @@
         </div>
     </div>
     <div class="col-md-8 rhs-container text-center">
-        <div id="wizard_container">
-            <!-- /top-wizard -->
-            <form name="example-1" id="wrapped" method="POST">
-                <!-- Leave for security protection, read docs for details -->
-                <div id="middle-wizard1">
+        <div class="step">
+            <h3 class="main_question">
+                <strong>3/4</strong>Please select kitchen theme</h3>
+            <div class="row">
+                <div class="col-xs-10 col-sm-4 form-group radio_input">
+                    <label>
+                        <a class="img1" href="./assets/img/option1.jpg">
+                            <img src="./assets/img/option1.jpg" (click)="setSelectedTheme(5, 'theme1');" class="img-theme">
+                            <div *ngIf="selectedThemename=='theme1'" class="theme-selected">
+                                <i class="fas fa-4x fa-check-circle selected-icon"></i>
+                            </div>
+                        </a>
+                    </label>
+                </div>
+                <div class="col-xs-10 col-sm-4 form-group radio_input">
+                    <label>
+                        <a class="img1" href="./assets/img/option2.jpg">
+                            <img src="./assets/img/option2.jpg" (click)="setSelectedTheme(6, 'theme2');" class="img-theme">
+                        </a>
+                        <div *ngIf="selectedThemename=='theme2'" class="theme-selected">
+                            <i class="fas fa-4x fa-check-circle selected-icon"></i>
+                        </div>
+                    </label>
+                </div>
+                <div class="col-xs-10 col-sm-4 form-group radio_input">
+                    <label>
+                        <a class="img1" href="./assets/img/option3.jpeg">
+                            <img src="./assets/img/option3.jpeg" (click)="setSelectedTheme(7, 'theme3');" class="img-theme">
+                        </a>
+                        <div *ngIf="selectedThemename=='theme3'" class="theme-selected">
+                            <i class="fas fa-4x fa-check-circle selected-icon"></i>
+                        </div>
+                    </label>
+                </div>
+            </div>
 
-                    <div class="step">
-                        <h3 class="main_question">
-                            <strong>3/4</strong>Please select kitchen theme</h3>
-                        <div class="row">
-                            <div class="col-xs-10 col-sm-6 form-group radio_input">
-                                <label>
-                                    <input type="radio" value="5" name="satisfaction" class="icheck required" [checked]="selectedThemename=='theme1'" (click)="setSelectedTheme($event,'theme1')">
-                                    <img src="./assets/img/option1.jpg" class="img-theme">
-                                </label>
-                            </div>
-                            <div class="col-xs-10 col-sm-6 form-group radio_input">
-                                <label>
-                                    <input type="radio" value="6" name="satisfaction" class="icheck required" [checked]="selectedThemename=='theme2'" (click)="setSelectedTheme($event,'theme2')">
-                                    <img src="./assets/img/option2.jpg" class="img-theme">
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-10 col-sm-6 form-group radio_input">
-                                <label>
-                                    <input type="radio" value="7" name="satisfaction" class="icheck required" [checked]="selectedThemename=='theme3'" (click)="setSelectedTheme($event,'theme3')">
-                                    <img src="./assets/img/option3.jpg" class="img-theme"> </label>
-                            </div>
-                        </div>
-                        <!-- /row -->
+
+            <!-- <div class="col-xs-10 col-sm-6 form-group radio_input">
+                        <label>
+                            <input type="radio" value="6" name="satisfaction" class="icheck required" [checked]="selectedThemename=='theme2'" (click)="setSelectedTheme($event,'theme2')">
+                            <img src="./assets/img/option2.jpg" class="img-theme">
+                        </label>
                     </div>
-                    <!-- /step-->
-
-
-                    <!-- /step-->
-                </div>
-                <!-- /middle-wizard -->
-                <div id="bottom-wizard">
-                    <button type="button" name="backward" class="backward" [routerLink]="['/home/size']">Previous </button>
-                    <button type="button" name="forward" class="forward" (click)="goNext(4)">Next/Skip</button>
-
-                </div>
-                <!-- /bottom-wizard -->
-            </form>
+                    <div class="row">
+                        <div class="col-xs-10 col-sm-6 form-group radio_input">
+                            <label>
+                                <input type="radio" value="7" name="satisfaction" class="icheck required" [checked]="selectedThemename=='theme3'" (click)="setSelectedTheme($event,'theme3')">
+                                <img src="./assets/img/option3.jpg" class="img-theme"> </label>
+                        </div>
+                    </div> -->
+            <!-- /row -->
         </div>
-        <!-- /Wizard container -->
+        <!-- /step-->
+
+
+        <!-- /step-->
+        <div id="bottom-wizard">
+            <button type="button" name="backward" class="backward" [routerLink]="['/home/size']">Previous </button>
+            <button type="button" name="forward" class="forward" (click)="goNext(4)">Next/Skip</button>
+
+        </div>
     </div>
 </div>

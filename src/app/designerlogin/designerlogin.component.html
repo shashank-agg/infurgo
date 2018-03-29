@@ -1,64 +1,49 @@
-<main>
-		<div id="form_container">
-			<div class="row">
-				<div class="col-md-5">
-					<div id="left_form">
-						<figure><img src="./assets/img/registration_bg.svg" alt=""></figure>
-						<h2>Designer Login</h2>
-						<p>Tation argumentum et usu, dicit viderer evertitur te has. Eu dictas concludaturque usu, facete detracto patrioque an per, lucilius pertinacia eu vel.</p>
-						<a href="#0" id="more_info" data-toggle="modal" data-target="#more-info"><i class="pe-7s-info"></i></a>
-					</div>
-				</div>
-				<div class="col-md-7">
+<div class="outer">
+    <div class="desginer-login-container">
+        <div class="row lhs-and-rhs">
+            <div class="col-md-5 lhs">
+                <figure>
+                    <img src="./assets/img/registration_bg.svg" alt="">
+                </figure>
+                <h2>Designer Login</h2>
+                <p>Tation argumentum et usu, dicit viderer evertitur te has. Eu dictas concludaturque usu, facete detracto patrioque
+                    an per, lucilius pertinacia eu vel.</p>
+                <a href="#0" id="more_info" data-toggle="modal" data-target="#more-info">
+                    <i class="pe-7s-info"></i>
+                </a>
+            </div>
+            <div class="col-md-7 rhs">
+                <!-- Leave for security protection, read docs for details -->
+                <div class="step">
+                    <h3 class="main_question">Login</h3>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <span *ngIf="error" class="error">{{errorMsg}}</span>
+                                <input type="text" name="username" [(ngModel)]='username' (focus)='removeError()' class="form-control required" placeholder="User Name">
+                            </div>
+                        </div>
 
-					<div id="wizard_container">
-						<div id="top-wizard">
-							<div id="progressbar"></div>
-						</div>
-						<!-- /top-wizard -->
-						<form name="example-1" id="wrapped" method="POST">
-							<input id="website" name="website" type="text" value="">
-							<!-- Leave for security protection, read docs for details -->
-							<div id="middle-wizard">
+                    </div>
+                    <!-- /row -->
 
-								<div class="step">
-									<h3 class="main_question">Login</h3>
-									<div class="row">
-										<div class="col-sm-6">
-											<div class="form-group">
-												<span *ngIf="error" class="error">{{errorMsg}}</span>
-												<input type="text" name="username"  [(ngModel)]='username' (focus)='removeError()'  class="form-control required" placeholder="User Name">
-											</div>
-										</div>
-										
-									</div>
-									<!-- /row -->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input type="password" name="password" [(ngModel)]='password' (focus)='removeError()' class="form-control required" placeholder="Password">
+                            </div>
+                        </div>
 
-									<div class="row">
-										<div class="col-sm-6">
-											<div class="form-group">
-												<input type="password" name="password" [(ngModel)]='password' (focus)='removeError()'  class="form-control required" placeholder="Password">
-											</div>
-										</div>
-									
-									</div>
-									<!-- /row -->
-								</div>
-								<!-- /step-->
+                    </div>
+                    <!-- /row -->
+                </div>
+                <div id="bottom-wizard">
+                    <button type="button" name="forward" class="forward" (click)="login()">Login</button>
 
-							
-								<!-- /step-->
-							</div>
-							<!-- /middle-wizard -->
-							<div id="bottom-wizard">
-								<button type="button" name="forward" class="forward" (click)="login()">Login</button>
-								
-							</div>
-							<!-- /bottom-wizard -->
-						</form>
-					</div>
-					<!-- /Wizard container -->
-				</div>
-			</div><!-- /Row -->
-		</div><!-- /Form_container -->
-	</main>
+                </div>
+            </div>
+        </div>
+        <!-- /Row -->
+    </div>
+</div>
+<!-- /Form_container -->

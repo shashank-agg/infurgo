@@ -755,11 +755,11 @@ input.form-control#check_out {
 	margin-top: 10px;
 }
 
-.radio_input label {
+/* .radio_input label {
 	padding-left: 0;
 	margin-right: 15px;
 	color: #999;
-}
+} */
 
 /*-------- 3.1 Other pages --------*/
 main#general_page {
